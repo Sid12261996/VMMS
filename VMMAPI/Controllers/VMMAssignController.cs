@@ -200,6 +200,8 @@ namespace VMMAPI.Controllers
             //}
             //foreach (string str in result)
             //    Console.WriteLine(str);
+
+            var dict = new List<Dictionary<string, string[]>>();
            
             string myData = datatable.Rows[0][9].ToString();
             if (datatable.Rows.Count > 0)
@@ -207,12 +209,21 @@ namespace VMMAPI.Controllers
                 
                 foreach (DataRow dtRow in datatable.Rows)
                 {
-                        var Description=dtRow["Description"].ToString();
-                        var BImage = dtRow["BImage"].ToString();
-                        var AImage = dtRow["AImage"].ToString();
+                    string[] values = new string[2]; 
+                    values[0]= dtRow["BImage"].ToString();
+                    values[1]= dtRow["AImage"].ToString();
+                    var dummy = new Dictionary<string, string[]>();
+                    dummy.Add(dtRow["Description"].ToString(), values);
+                    dict.Add(dummy);
+                        //var Description=dtRow["Description"].ToString();
+                        //var BImage = dtRow["BImage"].ToString();
+                        //var AImage = dtRow["AImage"].ToString();
                 }
             }
-            var toReturn = returningSerialsedData(datatable);
+            //object toReturn = new object();
+           var toReturn=new toReturnFormat();
+              toReturn.Other =returningSerialsedData(datatable);
+            toReturn.Description = dict;
             
             return (ActionResult)this.Json(toReturn, JsonRequestBehavior.AllowGet);
 
@@ -526,5 +537,16 @@ namespace VMMAPI.Controllers
 
     }
     ////////////////////////////////////////////////////////////////////////
-    
+    public class toReturnFormat {
+        public toReturnFormat()
+        {
+            Description = new List<Dictionary<string, string[]>>();
+            Other = new List<Dictionary<string, object>>();
+        }
+       
+        public List<Dictionary<string,string[]>> Description;
+        public List<Dictionary<string, object>> Other;
+
+
+    }
 }
