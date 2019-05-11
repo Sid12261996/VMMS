@@ -1,0 +1,1 @@
+﻿1>------ Rebuild All started: Project: VMMAPI, Configuration: Debug Any CPU ------

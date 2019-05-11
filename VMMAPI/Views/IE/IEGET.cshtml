@@ -1,0 +1,51 @@
+﻿@model VMMAPI.Models.IE
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddIE</title>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+         
+        <div id="divget" >
+        <table border="1" width="80%">
+
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Question</td>
+                        <td>Answer</td>
+                        <td>Action</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @{
+                        foreach (System.Data.DataRow dr in ViewBag.IE.Rows)
+                        {
+                            <tr>
+                                <td>@dr["Id"]</td>
+                                <td>@dr["Question"]</td>
+                                <td><a href=@dr["Answer"]>@dr["Answer"]</a></td>
+                                <td>
+                                    <a href="/IE/UpdateIE?Id=@dr["Id"]">Edit</a>
+                                </td>
+
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    
+                            
+    </body>
+</html>

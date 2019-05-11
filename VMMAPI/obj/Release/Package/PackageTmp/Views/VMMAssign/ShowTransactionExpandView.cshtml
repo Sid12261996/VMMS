@@ -1,0 +1,995 @@
+﻿
+@{
+    ViewBag.Title = "ShowTransactionExpandView";
+    Layout = null;
+    string result_Transaction = ViewBag.Transaction;
+    string hel = result_Transaction;
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Call Details VMM Portal</title>
+
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!--Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Google Font-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+
+    <!-- Propeller css -->
+    <link href="../VmmAssets/css/propeller.min.css" rel="stylesheet">
+
+    <!-- Custom css -->
+    <link href="../VmmAssets/css/style.css" rel="stylesheet">
+    <link href="../VmmAssets/css/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css">
+
+    <style type="text/css">
+        .slide-cont {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .owl-carouse div {
+            width: 100%;
+        }
+
+        /*SEE END OF THUMBNAIL FUCNTION TO TINKER SIZE OF THUMBS*/
+        .owl-carousel .owl-controls .owl-dot {
+            float: left;
+            background-size: cover;
+            margin-top: 10px;
+        }
+
+
+        /* BELOW THIS IS JUST MY OWN BACKGROUND ETC AND ISN'T NEEDED */
+        .owl-carousel .owl-dot {
+            float: left;
+            background-size: cover;
+        }
+
+        .custom-close-modal .modal-dialog {
+            width: 80%;
+        }
+
+        .go-back-section .pmd-card-subtitle-text {
+            color: rgba(255,255,255,1);
+            margin: 0 0 0 8px;
+            line-height: 1.6;
+            vertical-align: middle;
+            font-weight: normal;
+        }
+
+        span.media-left.pmd-card-subtitle-text {
+        }
+
+        .custom-close-modal {
+            background: rgba(0,0,0,0.8);
+        }
+
+        .go-back-section .pmd-card-subtitle-text {
+        }
+
+        .custom-close-modal .cd-left-cvr {
+            background: rgba(255,255,255,0.87);
+        }
+
+        .custom-close-modal .item img {
+            height: 100%;
+    width: auto;
+    margin: auto;
+        }
+
+        .custom-close-modal .item {
+            height: 420px;
+        }
+
+        .custom-close-modal .owl-dots {
+            margin-top: 50px;
+        }
+
+        .custom-close-modal .owl-dot {
+            margin: 0 24px 0 0;
+        }
+
+        .custom-close-modal .res-box table.table tbody tr td:last-child {
+            width: auto;
+        }
+
+        .custom-close-modal .res-box .form-control {
+            height: 300px;
+            border: none;
+        }
+
+            .custom-close-modal .res-box .form-control::placeholder {
+                color: #2A006F;
+                font-weight: 300;
+            }
+
+        .custom-close-modal .cd-left-cvr .red-btn, .custom-close-modal .cd-left-cvr .green-btn {
+            padding: 4px 10px 0;
+            margin: 0 15px 0 0;
+        }
+
+        .red-btn span, .green-btn span {
+            display: inline-block;
+            vertical-align: super;
+            font-size: 12px;
+        }
+
+        .custom-modal-footer {
+            position: absolute;
+            top: 83%;
+        }
+
+        .custom-close-modal .owl-dot.active {
+            border: 1px solid #fff;
+        }
+
+        .custom-close-modal .owl-dot {
+            position: relative;
+        }
+
+        .owl-dot.dotnumber1 span:after {
+            position: absolute;
+            content: 'After';
+            bottom: -22px;
+            color: #fff;
+        }
+
+        .owl-dot.dotnumber2 span:after {
+            position: absolute;
+            content: 'Before';
+            bottom: -22px;
+            color: #fff;
+        }
+
+        .custom-close-modal .res-box table.table tbody tr td {
+            width: 50%;
+            font-size: 14px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top pmd-navbar pmd-z-depth">
+            <div class="container-fluid">
+            <input type="hidden" id="taskidhidden" />
+
+                <input type="hidden" id="AssetsIdHidden" />
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button class="pmd-ripple-effect navbar-toggle pmd-navbar-toggle" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="javascript:void(0);" class="navbar-brand navbar-brand-custome">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
+                            <defs>
+                                <style>
+                                    .a {
+                                        fill: #279d82;
+                                    }
+
+                                    .b {
+                                        opacity: 0.14;
+                                    }
+
+                                    .c {
+                                        fill: #d3d4d7;
+                                    }
+
+                                    .d, .i {
+                                        fill: #fff;
+                                    }
+
+                                    .e {
+                                        fill: #1e212a;
+                                    }
+
+                                    .f, .g, .h {
+                                        opacity: 0.54;
+                                    }
+
+                                    .f {
+                                        fill: url(#c);
+                                    }
+
+                                    .g {
+                                        fill: url(#d);
+                                    }
+
+                                    .h {
+                                        fill: url(#e);
+                                    }
+
+                                    .i {
+                                        opacity: 0.16;
+                                    }
+
+                                    .j {
+                                        filter: url(#a);
+                                    }
+                                </style>
+                                <filter id="a" x="0" y="0" width="54" height="54" filterUnits="userSpaceOnUse"><feOffset dy="3" input="SourceAlpha" /><feGaussianBlur stdDeviation="3" result="b" /><feFlood flood-opacity="0.071" /><feComposite operator="in" in2="b" /><feComposite in="SourceGraphic" /></filter>
+                                <linearGradient id="c" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#fff" stop-opacity="0.161" /><stop offset="1" stop-color="#1e212a" stop-opacity="0" /></linearGradient>
+                                <linearGradient id="d" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox"><stop offset="0" stop-opacity="0.161" /><stop offset="1" stop-color="#1e212a" stop-opacity="0" /></linearGradient>
+                                <linearGradient id="e" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#d" />
+                            </defs>
+                            <g transform="translate(9 6)"><g class="j" transform="matrix(1, 0, 0, 1, -9, -6)"><ellipse class="a" cx="18" cy="18" rx="18" ry="18" transform="translate(9 6)" /></g><path class="b" d="M5495.023,2198.976a18,18,0,0,0,17.175-20.444h0l-7.075-7.114-21.517,12.842,4.34,4.363-1.795,1.434Z" transform="translate(-5476.367 -2162.989)" /><ellipse class="c" cx="0.3" cy="0.3" rx="0.3" ry="0.3" transform="translate(17.7 20.7)" /><g transform="translate(7.2 8.383)"><path class="d" d="M5488.979,2190.173h13.461v.588h-13.461Z" transform="translate(-5484.91 -2176.061)" /><path class="e" d="M.2,0H21.4a.2.2,0,0,1,.2.2V10.584a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V.2A.2.2,0,0,1,.2,0Z" transform="translate(0)" /><path class="d" d="M0,0H21.6a0,0,0,0,1,0,0V2.15a.2.2,0,0,1-.2.2H.2a.2.2,0,0,1-.2-.2V0A0,0,0,0,1,0,0Z" transform="translate(0 10.584)" /><path class="e" d="M5492.944,2188.605h7.514v1.176h-7.514Z" transform="translate(-5485.901 -2175.669)" /><path class="f" d="M5505,2184.293h-6.886v1.176h2.974v.588h-13.461v-.588h2.974v-1.176h-6.886a.152.152,0,0,1-.157-.147V2171.5a.152.152,0,0,1,.157-.147H5505a.153.153,0,0,1,.157.147v12.642A.153.153,0,0,1,5505,2184.293Z" transform="translate(-5483.553 -2171.357)" /><path class="d" d="M5503.127,2194.135l-1.093.653-.006.8,1.093.68h3.46v-2.133Z" transform="translate(-5488.172 -2177.052)" /><g transform="translate(2.343 17.084)"><g transform="translate(6.944 0.718)"><path class="d" d="M5495.937,2195.093v.675h4.568l.007-.675Z" transform="translate(-5495.937 -2195.093)" /><path class="g" d="M5495.937,2195.093v.675h4.568l.007-.675Z" transform="translate(-5495.937 -2195.093)" /></g><path class="e" d="M5487.9,2194.357c-.673,0-1.22.4-1.22.9s.547.9,1.22.9h5.724v-1.8Z" transform="translate(-5486.679 -2194.19)" /><path class="h" d="M5503.131,2194.135l-1.093.653-.005.8,1.093.68h3.458v-2.133Z" transform="translate(-5490.517 -2194.135)" /></g><g transform="translate(7.05 2.482)"><path class="a" d="M5493.879,2177.877a1.623,1.623,0,0,0,.678.281v.259h.544v-.259a1.622,1.622,0,0,0,.678-.281l.183.183.385-.385-.182-.183a1.643,1.643,0,0,0,.28-.677h.259v-.545h-.259a1.65,1.65,0,0,0-.28-.678l.182-.182-.385-.385-.183.183a1.63,1.63,0,0,0-.678-.281v-.259h-.544v.259a1.631,1.631,0,0,0-.678.281l-.183-.183-.386.385.184.182a1.632,1.632,0,0,0-.281.678h-.258v.545h.258a1.625,1.625,0,0,0,.281.677l-.184.183.386.385Zm.444-1.841a.715.715,0,1,1,0,1.011A.715.715,0,0,1,5494.324,2176.035Z" transform="translate(-5492.955 -2174.666)" /><path class="i" d="M5493.879,2178.061a1.62,1.62,0,0,0,.678.281v.259h.544v-.259a1.619,1.619,0,0,0,.678-.281l.183.183.191-.191-.821-.82a.715.715,0,0,1-1.011-1.01l-.821-.821-.19.191.184.182a1.634,1.634,0,0,0-.281.678h-.258V2177h.258a1.628,1.628,0,0,0,.281.678l-.184.183.386.385.183-.183Z" transform="translate(-5492.955 -2174.85)" /><g transform="translate(3.75 2.25)"><path class="a" d="M5498.88,2180.877a1.623,1.623,0,0,0,.678.281v.259h.544v-.259a1.628,1.628,0,0,0,.678-.281l.183.183.384-.385-.182-.183a1.63,1.63,0,0,0,.28-.677h.259v-.545h-.259a1.64,1.64,0,0,0-.28-.678l.182-.182-.384-.385-.183.183a1.63,1.63,0,0,0-.678-.281v-.259h-.544v.259a1.625,1.625,0,0,0-.678.281l-.184-.183-.385.385.183.183a1.634,1.634,0,0,0-.281.678h-.259v.545h.259a1.624,1.624,0,0,0,.281.677l-.183.183.385.385Zm.445-1.842a.715.715,0,1,1,0,1.011A.716.716,0,0,1,5499.325,2179.035Z" transform="translate(-5497.955 -2177.666)" /><path class="i" d="M5498.88,2181.061a1.614,1.614,0,0,0,.678.281v.259h.544v-.259a1.619,1.619,0,0,0,.678-.281l.183.183.19-.191-.82-.82a.715.715,0,0,1-1.012-1.01l-.82-.821-.19.191.183.182a1.633,1.633,0,0,0-.281.678h-.259V2180h.259a1.627,1.627,0,0,0,.281.678l-.183.183.385.385.184-.183Z" transform="translate(-5497.955 -2177.85)" /></g></g></g></g>
+                        </svg>
+                        <span class="logo-txt">Support Suite</span>
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse pmd-navbar-sidebar">
+                    <div class="dropdown pmd-dropdown pmd-user-info pull-right">
+                        <a href="javascript:void(0);" class="btn-user dropdown-toggle media" data-toggle="dropdown" data-sidebar="true" aria-expanded="false">
+                            <div class="media-left">
+
+                                @using (Html.BeginForm("Logout", "VMMAssign", FormMethod.Post))
+                                {
+    <!-- form goes here -->
+
+
+
+                                    <input type="submit" value="" class="logout-icon" />
+
+
+                                }
+                            </div>
+                            
+                        </a>
+                        
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a class="pmd-ripple-effect" href="@Url.Action("AssignTaskNew1", "VMMAssign")" ;">
+                                <i class="material-icons">
+                                    add
+                                </i> <span>Assign New</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pmd-ripple-effect active" href="@Url.Action("ShowTransactionDetails", "VMMAssign")" ;">
+                                <i class="material-icons">
+                                    brightness_low
+                                </i> <span>In Progress</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pmd-ripple-effect" href="@Url.Action("AssignTaskNew1", "VMMAssign")" ;">
+                                <i class="material-icons">
+                                    done_all
+                                </i> <span>Summary Report</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pmd-ripple-effect" href="@Url.Action("ViewDashBoardReport", "VMMAssign")" ;">
+                                <i class="material-icons">
+                                    done_all
+                                </i> <span>Detailed Reports</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="pmd-ripple-effect" href="@Url.Action("AddIE", "IE")" ;">
+                                <i class="material-icons">
+                                    done_all
+                                </i> <span>IE</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="vmm-txt pull-right">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="30" viewBox="0 0 108 30">
+                            <defs>
+                                <style>
+                                    .aa {
+                                        fill: #ebeaec;
+                                    }
+                                </style>
+                            </defs>
+                            <path class="aa" d="M126.354,2518.688l11.523-20.485a.366.366,0,0,1,.32-.18H141.7a.336.336,0,0,1,.323.483l-15.656,28.908a.375.375,0,0,1-.646,0l-15.656-28.908a.336.336,0,0,1,.323-.483H113.9a.366.366,0,0,1,.32.18l11.5,20.485A.375.375,0,0,0,126.354,2518.688Zm37.44,7.048,11.248-13.84a.366.366,0,0,1,.65.2v15.592a.348.348,0,0,0,.361.333l3.339,0a.349.349,0,0,0,.361-.335v-28.6a.366.366,0,0,0-.654-.2l-15.3,19.593a.379.379,0,0,1-.585,0l-15.3-19.593a.366.366,0,0,0-.654.2v28.6a.349.349,0,0,0,.361.335l3.339,0a.348.348,0,0,0,.361-.333V2512.1a.366.366,0,0,1,.65-.2l11.248,13.84A.38.38,0,0,0,163.795,2525.736Zm22.393-26.847a.366.366,0,0,0-.654.2v28.6a.349.349,0,0,0,.361.335l3.339,0a.348.348,0,0,0,.361-.333V2512.1a.366.366,0,0,1,.65-.2l11.248,13.84a.38.38,0,0,0,.577,0l11.248-13.84a.366.366,0,0,1,.65.2v15.592a.348.348,0,0,0,.361.333l3.339,0a.349.349,0,0,0,.361-.335v-28.6a.366.366,0,0,0-.654-.2l-15.3,19.593a.379.379,0,0,1-.585,0Z" transform="translate(-110.028 -2498.023)" />
+                        </svg>
+                    </div>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+            <div class="pmd-sidebar-overlay"></div>
+        </nav>
+        <!-- Nav menu with user information -->
+
+    </header>
+
+    <section class="sel-dat top-m call-det">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group pmd-textfield">
+                        <div class="sta-hdr">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="res-box">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="cd-left-cvr">
+                        <h2 class="clearfix"><span><img src="../VmmAssets/images/list.png" alt="list icon"> Call Details</span> </h2>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td style="width:27%">
+                                       
+                                        <img src="../VmmAssets/images/user-icon.png" alt="user icon"> <span>Customer</span>
+                                    </td>
+                                    <td><span id="spnCustNam"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../VmmAssets/images/city.png" alt="city icon"> <span>Location</span>
+                                    </td>
+                                    <td><span id="spnLocation"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../VmmAssets/images/new-task-icon.png" alt="acticity icon"> <span>Activity</span>
+                                    </td>
+                                    <td><span id="spnACtivity"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../VmmAssets/images/activity-category.png" alt="category icon"> <span>Category</span>
+                                    </td>
+                                    <td><span id="spnCategory"> Scheduled activity execution</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../VmmAssets/images/no.-of-tasks.png" alt="user icon"> <span>No. of tasks</span>
+                                    </td>
+                                    <td><span id="spnNotask"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../VmmAssets/images/list.png" alt="user icon"> <span>Assigned to</span>
+                                    </td>
+                                    <td><span id="spnvender"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="../VmmAssets/images/date.png" alt="calender icon"> <span>Assigned on</span>
+                                    </td>
+                                    <td><span id="spnDate"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="row atp pho-rec cs-rgt-cvr">
+                        <h2><img src="../VmmAssets/images/pic-icon.png" alt="pic icon"> Photos Received</h2>
+                        <div class="hcu">
+                            <h3><img src="../VmmAssets/images/health-chk-act.png" alt="list icon"> Health Check-up activities </h3>
+                            <div class="hcr-cvr do-nicescroll3" id="pnlHealth">
+                              
+                            </div>
+                        </div>
+                        <div class="pav">
+                            <h3><img src="../VmmAssets/images/list.png" alt="list icon"> Physical Assets Verification Activities</h3>
+                            <div class="hcr-cvr do-nicescroll3" id="pnlPhysical">
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Dialog in large size -->
+        <button data-target="#large-dialog" data-toggle="modal" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button" id="btnModal"  style="display:none;">Large Modal</button>
+        <div tabindex="-1" class="modal fade custom-close-modal" id="large-dialog" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="">
+                    <div class="modal-header">
+                        <div class="go-back-section"><a aria-hidden="true" data-dismiss="modal" href="javascript:void(0);"><i class="material-icons md-light pmd-sm">keyboard_backspace</i> <span class="media-left pmd-card-subtitle-text">Go back</span></a></div>
+                        <h2 class="media-body media-middle go-back-section"><img src="../VmmAssets/images/pic-icon.png" alt="pic icon"><span class="pmd-card-subtitle-text">Host Name - Image 1</span></h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="slide-cont">
+                                <div class="owl-carousel">
+                                    <div class="item" id="imageAfter"><img src="http://imew.co.uk/wp-content/uploads/2017/03/cav1-1.png"></div>
+                                    <div class="item" id="imageBfter"><img src="http://imew.co.uk/wp-content/uploads/2017/03/cav2-1.png"></div>
+                                </div>
+                            </div>
+                            <div class="custom-modal-footer">
+                                <h2 class="media-body media-middle go-back-section"><img src="../VmmAssets/images/pic-icon.png" alt="pic icon"><span class="pmd-card-subtitle-text">Photos Received</span></h2>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 res-box">
+                            <div class="cd-left-cvr">
+                                <h2 class="clearfix"><span><img src="../VmmAssets/images/list.png" alt="list icon"> Image Details</span></h2>
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="../VmmAssets/images/new-task-icon.png" alt="acticity icon"> <span>Activity Name</span>
+
+                                            </td>
+                                            <td><span id="spnactvity"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="../VmmAssets/images/date.png" alt="calender icon"> <span>Received at</span>
+                                            </td>
+                                            <td><span id="spnDate"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <form class="clearfix">
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <textarea required class="form-control" placeholder="Enter Remarks" id="txtremarksarea"></textarea>
+                                        </div>
+                                        <div class="btn-con-cvr">
+                                            <a href="javascript:void(0);" class="red-btn"  id="btnCancel"><i class="material-icons pmd-xs">clear</i><span>Reject</span></a>
+                                            <a href="javascript:void(0);" id="btnapproved" class="green-btn"><i class="material-icons pmd-xs">done</i><span>Approve</span></a>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- jQuery before Propeller.js -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../VmmAssets/js/propeller.min.js"></script>
+    <script type="text/javascript" src="../VmmAssets/js/jquery.nicescroll.min.js"></script>
+    
+    <script type="text/javascript">
+
+
+   //Disable Back Button In All Browsers.
+        function DisableBackButtonAllBrowsers() {
+            window.history.forward()
+        };
+         DisableBackButtonAllBrowsers();
+        window.onload = DisableBackButtonAllBrowsers;
+         window.onpageshow = function (evts) { if (evts.persisted) DisableBackButtonAllBrowsers(); };
+        window.onunload = function () { void (0) };
+    </script>
+    <script type="text/javascript">
+
+
+
+        $(document).ready(function () {
+
+           
+        LoadTransaction();
+        LoadPhysicalInfo();
+        LoadHealthInfo();
+
+        $("#btnapproved").click(function () {
+
+            var Activityid = $("#taskidhidden").val();
+
+           
+            var Remarks = $("#txtremarksarea").val();
+          
+            var AssetsId = $("#AssetsIdHidden").val();
+            var Status = "1";
+
+            var r = confirm("Are you sure you want to approve?");
+            if (r == true) {
+
+                Manager_Remarks_(Activityid, Remarks, Status, AssetsId);
+            }
+            else {
+                return false;
+            }
+          
+        });
+
+
+        $("#btnCancel").click(function () {
+
+            var Activityid = $("#taskidhidden").val();
+
+
+            var Remarks = $("#txtremarksarea").val();
+
+            var AssetsId = $("#AssetsIdHidden").val();
+            var Status = "0";
+
+            var r = confirm("Are you sure you want to reject?");
+            if (r == true) {
+
+                Manager_Remarks_(Activityid, Remarks, Status, AssetsId);
+            }
+            else {
+                return false;
+            }
+
+        });
+
+
+
+
+
+        });
+
+
+        function Manager_Remarks_(Activityid, Remarks, Status, AssetsId) {
+            debugger;
+            var actasset = AssetsId;
+
+           
+            var tno = '@result_Transaction';
+
+           
+            var url = '@Url.Action("InsertRemarks", "VMMAssign")';
+
+
+            var url_com = url + "?TRNO=" + tno + '&Activityid=' + Activityid + '&Remarks=' + Remarks + '&Status=' + Status + '&AssetsId=' + AssetsId;
+
+
+
+            $.getJSON(url_com, function (result) {
+                var data = result;
+
+                if (result) {
+                    alert('Remarks successfully submitted ');
+                    location.reload();
+                }
+                else {
+                    alert(' Error In Records Submitted ');
+                }
+
+
+
+            });
+
+
+        }
+
+        function LoadTransaction() {
+
+            var url = '@Url.Action("ShowTransactionExpandView_get", "VMMAssign")';
+
+            var tno = '@result_Transaction';
+
+            var url_com = url + "?TRNO=" + tno;
+
+            $.getJSON(url_com, function (result) {
+                var data = result;
+
+                $.each(eval(data.replace(/[\r\n]/, "")), function (i, item) {
+
+
+                    $("#spnCustNam").html(item.CustName);
+                    $("#spnLocation").html(item.City);
+                    $("#spnACtivity").html(item.Type);
+                    $("#spnNotask").html(item.NoOfAssest);
+                    $("#spnvender").html(item.Name);
+
+                    $("#spnDate").html(item.AssignDate);
+
+
+
+
+
+                });
+
+
+
+            });
+        }
+
+
+
+
+        function LoadPhysicalInfo() {
+
+            var url = '@Url.Action("ShowPhysialImage", "VMMAssign")';
+
+            var tno = '@result_Transaction';
+
+            var url_com = url + "?TRNO=" + tno;
+
+
+            $.getJSON(url_com, function (result) {
+                var data = result;
+              
+                $("#pnlPhysical").empty();
+
+
+                $.each(eval(data.replace(/[\r\n]/, "")), function (i, item) {
+
+
+                    $("#pnlPhysical").append("<div id='divp" + i + "'> </div>");
+                    $("#divp" + i + "").append("<div id='divMp" + i + "'> </div>").addClass("hcr-rep");
+                    $("#divMp" + i + "").append("<span id='spnact" + i + "'>" + item.TaskName + "</span> <input id='HiddenDateP" + i + "' type='hidden' name='HiddenDateP'  value=" + item.ActDate + " />").addClass("hca-hd");
+
+                    $("#divp" + i + "").append("<div id='divLp" + i + "'> </div>");
+
+                    $("#divLp" + i + "").append("<div id='divBImgp" + i + "'> </div>").addClass("hca-content clearfix");
+                    $("#divBImgp" + i + "").append("<img src= ../VMMdocs/" + item.BImage + ">").addClass("left-con-box");
+
+                    $("#divBImgp" + i + "").append("<div id='divBImgbtnp" + i + "'> </div>");
+                    if (item.Status=="")
+                    {
+                        $("#divBImgbtnp" + i + "").append("<a href='#' id='crossp" + i + "' class='red-btn'><i class='material-icons'>clear</i></a> ").addClass("btn-con-cvr");
+                        $("#divBImgbtnp" + i + "").append(" <a href='#' id='crosspApr" + i + "' class='green-btn'><i class='material-icons'>done</i></a>").addClass("btn-con-cvr");
+
+                    }
+                   else if (item.Status == "1") {
+                       $("#divBImgbtnp" + i + "").append(" <a href='#' id='crosspApr" + i + "' class='green-btn'><i class='material-icons'>done</i></a>").addClass("btn-con-cvr");
+
+                    }
+                   else if (item.Status == "0") {
+                        $("#divBImgbtnp" + i + "").append("<a href='#' id='crossp" + i + "' class='red-btn'><i class='material-icons'>clear</i></a> ").addClass("btn-con-cvr");
+                     
+                    }
+                    
+                  
+
+
+
+                    
+
+                    $("#divLp" + i + "").append("<div id='divAImgp" + i + "'> </div> <input id='HiddenAimagep" + i + "' type='hidden' name='HiddenAimagep'  value=" + item.AImage + " />").addClass("hca-content clearfix");
+
+                   
+                    $("#divAImgp" + i + "").append("<img src= ../VMMdocs/" + item.AImage + "><input id='HiddenBimagep" + i + "' type='hidden' name='HiddenBimagep'  value=" + item.BImage + " />").addClass("right-con-box");
+
+                    $("#divAImgp" + i + "").append("<div id='divAImgbtnp" + i + "'> </div>");
+                     
+                    if (item.Status == "") {
+                        $("#divAImgbtnp" + i + "").append("<a href='#' id='tickp" + i + "' class='red-btn'><i class='material-icons'>clear</i></a> ").addClass("btn-con-cvr");
+                        $("#divAImgbtnp" + i + "").append(" <a href='#' id='tickpApr" + i + "' class='green-btn'><i class='material-icons'>done</i></a>").addClass("btn-con-cvr");
+
+                    }
+                    else if (item.Status == "1") {
+                        $("#divAImgbtnp" + i + "").append(" <a href='#'  id='tickpApr" + i + "' class='green-btn'><i class='material-icons'>done</i></a>").addClass("btn-con-cvr");
+
+                    }
+                    else if (item.Status == "0") {
+                        $("#divAImgbtnp" + i + "").append("<a href='#' id='tickp" + i + "' class='red-btn'><i class='material-icons'>clear</i></a> ").addClass("btn-con-cvr");
+                     
+                    }
+                    //crosspApr
+
+                    $("#crosspApr" + i + "").click(function () {
+
+
+
+                        $("#spnactvity").html($("#spnact" + i + "").html());
+
+                        $("#taskidhidden").val(item.Activity);
+                        $("#AssetsIdHidden").val(item.assestid);
+
+                        $("#btnModal").click();
+                        $("#imageAfter").empty();
+                        $("#imageBfter").empty();
+                        //imageBfter
+                        $("#imageAfter").append("<img src= ../VMMdocs/" + $("#HiddenAimagep" + i + "").val() + ">");
+                        $("#imageBfter").append("<img src= ../VMMdocs/" + $("#HiddenBimagep" + i + "").val() + ">");
+                        $("#spnDate").html($("#HiddenDateP" + i + "").val());
+
+                        // alert($("#HiddenAimagep" + i + "").val());
+                        // alert($("#HiddenBimagep" + i + "").val());
+                    });
+                    $("#crossp" + i + "").click(function () {
+
+                        alert($("#HiddenDateP" + i + "").val());
+                        $("#spnactvity").html($("#spnact" + i + "").html());
+                        
+                        $("#taskidhidden").val(item.Activity);
+                        $("#AssetsIdHidden").val(item.assestid);
+                        
+                        $("#btnModal").click();
+                        $("#imageAfter").empty();
+                        $("#imageBfter").empty();
+                        //imageBfter
+                        $("#imageAfter").append("<img src= ../VMMdocs/" + $("#HiddenAimagep" + i + "").val() + ">");
+                        $("#imageBfter").append("<img src= ../VMMdocs/" + $("#HiddenBimagep" + i + "").val() + ">");
+                        $("#spnDate").html();
+
+                     
+                       // alert($("#HiddenAimagep" + i + "").val());
+                       // alert($("#HiddenBimagep" + i + "").val());
+                    });
+
+                    $("#tickp" + i + "").click(function () {
+                        $("#btnModal").click();
+                        $("#spnactvity").html($("#spnact" + i + "").html());
+                        $("#taskidhidden").val(item.Activity);
+                        $("#AssetsIdHidden").val(item.assestid);
+
+
+                        $("#imageAfter").empty();
+                        $("#imageBfter").empty();
+                        //imageBfter
+                        $("#imageAfter").append("<img src= ../VMMdocs/" + $("#HiddenAimagep" + i + "").val() + ">");
+                        $("#imageBfter").append("<img src= ../VMMdocs/" + $("#HiddenBimagep" + i + "").val() + ">");
+                        $("#spnDate").html($("#HiddenDateP" + i + "").val());
+
+
+                       
+                    });
+
+                    $("#tickpApr" + i + "").click(function () {
+                        $("#btnModal").click();
+                        $("#spnactvity").html($("#spnact" + i + "").html());
+                        $("#taskidhidden").val(item.Activity);
+                        $("#AssetsIdHidden").val(item.assestid);
+
+
+                        $("#imageAfter").empty();
+                        $("#imageBfter").empty();
+                        //imageBfter
+                        $("#imageAfter").append("<img src= ../VMMdocs/" + $("#HiddenAimagep" + i + "").val() + ">");
+                        $("#imageBfter").append("<img src= ../VMMdocs/" + $("#HiddenBimagep" + i + "").val() + ">");
+                        $("#spnDate").html($("#HiddenDateP" + i + "").val());
+
+
+
+                    });
+
+
+
+                });
+
+
+
+            });
+        }
+
+
+
+        function LoadHealthInfo() {
+
+            var url = '@Url.Action("ShowHealthImage", "VMMAssign")';
+
+            var tno = '@result_Transaction';
+
+            var url_com = url + "?TRNO=" + tno;
+
+
+            $.getJSON(url_com, function (result) {
+                var data = result;
+
+                $("#pnlHealth").empty();
+
+              
+                $.each(eval(data.replace(/[\r\n]/, "")), function (i, item) {
+
+
+                    $("#pnlHealth").append("<div id='div" + i + "'> </div>");
+                    $("#div" + i + "").append("<div id='divM" + i + "'> </div>").addClass("hcr-rep");
+                    $("#divM" + i + "").append("<span id='spnactphy" + i + "'>" + item.TaskName + "</span><input id='HiddenDatePhy" + i + "' type='hidden' name='HiddenDatePhy'  value=" + item.ActDate + " />").addClass("hca-hd");
+
+                    $("#div" + i + "").append("<div id='divL" + i + "'> </div>");
+
+                    $("#divL" + i + "").append("<div id='divBImg" + i + "'> </div>").addClass("hca-content clearfix");
+                    $("#divBImg" + i + "").append("<img src= ../VMMdocs/" + item.BImage + ">").addClass("left-con-box");
+
+                    $("#divBImg" + i + "").append("<div id='divBImgbtn" + i + "'> </div>");
+                    if (item.Status == "") {
+
+                        $("#divBImgbtn" + i + "").append("<a href='#' id='cross" + i + "' class='red-btn'><i class='material-icons'>clear</i></a>  ").addClass("btn-con-cvr");
+
+
+                        $("#divBImgbtn" + i + "").append("<a href='#' id='Apr" + i + "' class='green-btn'><i class='material-icons'>done</i></a>").addClass("btn-con-cvr");
+                    }
+                    else if (item.Status == "1") {
+                        $("#divBImgbtn" + i + "").append("<a href='#' id='Apr" + i + "' class='green-btn'><i class='material-icons'>done</i></a>").addClass("btn-con-cvr");
+
+                    }
+                    else if (item.Status == "0") {
+                        $("#divBImgbtn" + i + "").append("<a href='#' id='cross" + i + "' class='red-btn'><i class='material-icons'>clear</i></a>  ").addClass("btn-con-cvr");
+
+                    }
+                    
+
+                   
+
+                    $("#divL" + i + "").append("<div id='divAImg" + i + "'> </div> <input id='HiddenAimage" + i + "' type='hidden' name='HiddenAimage'  value=" + item.AImage + " />").addClass("hca-content clearfix");
+
+
+                    $("#divAImg" + i + "").append("<img src= ../VMMdocs/" + item.AImage + "><input id='HiddenBimage" + i + "' type='hidden' name='HiddenBimage'  value=" + item.BImage + " />").addClass("right-con-box");
+
+                    $("#divAImg" + i + "").append("<div id='divAImgbtn" + i + "'> </div>");
+
+                    if (item.Status == "") {
+                        $("#divAImgbtn" + i + "").append("<a href='#' id='tick" + i + "' class='red-btn'><i class='material-icons'>clear</i></a> ").addClass("btn-con-cvr");
+                        $("#divAImgbtn" + i + "").append(" <a href='#' id='tickApr" + i + "' class='green-btn'><i class='material-icons'>done</i></a>").addClass("btn-con-cvr");
+
+                    }
+                  else  if (item.Status == "1") {
+                      $("#divAImgbtn" + i + "").append(" <a href='#'  id='tickApr" + i + "' class='green-btn'><i class='material-icons'>done</i></a>").addClass("btn-con-cvr");
+
+                    }
+                   else if (item.Status == "0") {
+                        $("#divAImgbtn" + i + "").append("<a href='#' id='tick" + i + "' class='red-btn'><i class='material-icons'>clear</i></a> ").addClass("btn-con-cvr");
+                      
+                    }
+                    //Apr
+
+                    $("#Apr" + i + "").click(function () {
+                        $("#btnModal").click();
+                        $("#imageAfter").empty();
+                        $("#imageBfter").empty();
+                        //imageBfter
+                        $("#imageAfter").append("<img src= ../VMMdocs/" + $("#HiddenAimage" + i + "").val() + ">");
+                        $("#imageBfter").append("<img src= ../VMMdocs/" + $("#HiddenBimage" + i + "").val() + ">");
+                        $("#taskidhidden").val(item.Activity);
+                        $("#AssetsIdHidden").val(item.assestid);
+                        $("#spnactvity").html($("#spnactphy" + i + "").html());
+
+                        $("#spnDate").html($("#HiddenDatePhy" + i + "").val());
+
+
+                    });
+
+                    $("#cross" + i + "").click(function () {
+                        $("#btnModal").click();
+                        $("#imageAfter").empty();
+                        $("#imageBfter").empty();
+                        //imageBfter
+                        $("#imageAfter").append("<img src= ../VMMdocs/" + $("#HiddenAimage" + i + "").val() + ">");
+                        $("#imageBfter").append("<img src= ../VMMdocs/" + $("#HiddenBimage" + i + "").val() + ">");
+                        $("#taskidhidden").val(item.Activity);
+                        $("#AssetsIdHidden").val(item.assestid);
+                        $("#spnactvity").html($("#spnactphy" + i + "").html());
+                        $("#spnDate").html($("#HiddenDatePhy" + i + "").val());
+
+
+                    });
+
+                    $("#tick" + i + "").click(function () {
+                        $("#btnModal").click();
+                        $("#imageAfter").empty();
+                        $("#imageBfter").empty();
+                        $("#spnactvity").html($("#spnactphy" + i + "").html());
+                        $("#taskidhidden").val(item.Activity);
+                        $("#AssetsIdHidden").val(item.assestid);
+                        //imageBfter
+                        $("#imageAfter").append("<img src= ../VMMdocs/" + $("#HiddenAimage" + i + "").val() + ">");
+                        $("#imageBfter").append("<img src= ../VMMdocs/" + $("#HiddenBimage" + i + "").val() + ">");
+                        $("#spnDate").html($("#HiddenDatePhy" + i + "").val());
+
+                       // alert($("#HiddenAimage" + i + "").val());
+                       // alert($("#HiddenBimage" + i + "").val());
+
+                    });
+
+                    //tickApr
+                    $("#tickApr" + i + "").click(function () {
+                        $("#btnModal").click();
+                        $("#imageAfter").empty();
+                        $("#imageBfter").empty();
+                        $("#spnactvity").html($("#spnactphy" + i + "").html());
+                        $("#taskidhidden").val(item.Activity);
+                        $("#AssetsIdHidden").val(item.assestid);
+                        //imageBfter
+                        $("#imageAfter").append("<img src= ../VMMdocs/" + $("#HiddenAimage" + i + "").val() + ">");
+                        $("#imageBfter").append("<img src= ../VMMdocs/" + $("#HiddenBimage" + i + "").val() + ">");
+                        $("#spnDate").html($("#HiddenDatePhy" + i + "").val());
+                        // alert($("#HiddenAimage" + i + "").val());
+                        // alert($("#HiddenBimage" + i + "").val());
+
+                    });
+
+
+
+
+                });
+
+
+
+            });
+        }
+       
+    </script>
+
+
+    <!-- jQuery before Propeller.js -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/propeller.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.min.js"></script>
+    
+    <script>
+		$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+
+    items: 1,
+
+
+  });
+});
+
+
+// the following to the end is whats needed for the thumbnails.
+jQuery( document ).ready(function() {
+
+
+        // 1) ASSIGN EACH 'DOT' A NUMBER
+			dotcount = 1;
+
+			jQuery('.owl-dot').each(function() {
+			  jQuery( this ).addClass( 'dotnumber' + dotcount);
+			  jQuery( this ).attr('data-info', dotcount);
+			  dotcount=dotcount+1;
+			});
+
+			 // 2) ASSIGN EACH 'SLIDE' A NUMBER
+			slidecount = 1;
+
+			jQuery('.owl-item').not('.cloned').each(function() {
+			  jQuery( this ).addClass( 'slidenumber' + slidecount);
+			  slidecount=slidecount+1;
+			});
+
+			// SYNC THE SLIDE NUMBER IMG TO ITS DOT COUNTERPART (E.G SLIDE 1 IMG TO DOT 1 BACKGROUND-IMAGE)
+			jQuery('.owl-dot').each(function() {
+
+          grab = jQuery(this).data('info');
+
+          slidegrab = jQuery('.slidenumber'+ grab +' img').attr('src');
+          console.log(slidegrab);
+
+          jQuery(this).css("background-image", "url()");
+
+      });
+
+			// THIS FINAL BIT CAN BE REMOVED AND OVERRIDEN WITH YOUR OWN CSS OR FUNCTION, I JUST HAVE IT
+        // TO MAKE IT ALL NEAT
+			amount = jQuery('.owl-dot').length;
+			gotowidth = 100/amount;
+
+			jQuery('.owl-dot').css("width", 120+"px");
+			newwidth = jQuery('.owl-dot').width();
+			jQuery('.owl-dot').css("height", 60+"px");
+
+
+
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+@media(min-width: 1199px) {
+	.nxt-pre {
+		text-align: right;
+	}
+}
+
+@media(min-width:992px) and (max-width:1199px) {
+	
+}
+
+@media(max-width:991px) {
+	.left-sec .line {
+		border-right: none;
+		max-width: 100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.line img {
+		padding: 0px;
+		margin-top: 20px;
+	}
+	.left-sec h1, .left-sec p {
+		padding: 0;
+	}
+	.login-form {
+		margin: 0 auto;
+	}
+}
+
+@media(min-width:768px) and (max-width:991px) {
+	.left-sec, .right-sec {
+		width: 100%;
+		max-width: 100%;
+		flex: 100%;
+	}
+	.left-sec {
+		margin-bottom: 10%;
+	}
+	.exp-box button {
+		font-size: 11px;
+		padding: 5px 10px;
+	}
+	.exp-box button img {
+		width: 8%;
+	}
+	.date-box {
+		width: 100%;
+	}
+	.comp-det span {
+		font-size: 12px;
+	}
+	.search-box input {
+		width: 78%;
+	}
+}
+
+@media(max-width:767px) {
+	.login-form h1 {
+		font-size: 200%;
+	}
+	.login-form h1 ~ span {
+		font-size: 100%;
+	}
+	.login-btn {
+		font-size: 120%;
+	}
+	.fgt-link {
+		font-size: 100%;
+	}
+	.exp-box {
+		text-align: left;
+	}
+	.progressbar li {
+		height: 80px;
+		display: block;
+		width: 100%;
+	}
+	.progressbar li i {
+		top: unset;
+		bottom: unset;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+	.progressbar li:after {
+		width: 1px;
+		height: 100%;
+		right: 0;
+		top: unset;
+	}
+	.progressbar li:before {
+		left: 0;
+		right: 0;
+		top: unset;
+		bottom: unset;
+		margin: 0 auto;
+	}
+	.progressbar li.active i {
+		top: 5px;
+		bottom: unset;
+		margin: auto;
+		left: 0;
+	}
+	.txt-cvr {
+		position: absolute;
+		right: 40px;
+		bottom: unset;
+	}
+}
+
+@media(min-width:576px) and (max-width:767px) {
+	
+	.left-sec, .right-sec {
+		width: 100%;
+		max-width: 100%;
+		flex: 100%;
+	}
+	.left-sec {
+		margin-bottom: 10%;
+	}
+	.comp-det span {
+		font-size: 13px;
+	}
+}
+
+@media(max-width:575px) {
+	.login-form .form-group {
+		margin-bottom: 20px;
+	}
+	.login-footer {
+		position: relative;
+		margin-top: 0;
+		bottom: unset;
+	}
+	.login-footer p {
+		font-size: 12px;
+		margin-bottom: 20px;
+	}
+	.left-sec {
+		margin-bottom: 10%;
+	}
+	.login-form h1 ~ span {
+    	font-size: 93%;
+	}
+	.login-form {
+		padding: 10px 20px;
+	}
+	.logo-txt {
+		font-size: 13px;
+		margin-top: 20px;
+		display: inline-block;
+	}
+	.exp-box {
+		float: left;
+	}
+	.comp-det span {
+		font-size: 12px;
+	}
+	.exp-box button {
+		font-size: 11px;
+		padding: 5px 10px;
+	}
+	.exp-box button img {
+		width: 8%;
+	}
+	.date-box {
+		background-color: #f3f3f3;
+		border-radius: 50px;
+		padding: 5px 10px;
+		position: relative;
+		width: 50%;
+		margin-bottom: 10px;
+	}
+	.btn-box button {
+		max-width: 120px;
+	}
+	.pagi {
+		padding-top: 6px;
+	}
+	.search-bar {
+		margin-bottom: 15px;
+	}
+	.search-box input {
+		width: 78%;
+	}
+	.search-box button {
+		right:10px;
+	}
+	.comp-det {
+		margin-bottom: 5px;
+	}
+	.nxt-pre {
+		width: 30%;
+	}
+	.rgm-pagi .date-box-cvr {
+		width: 70%;
+		float: left;
+	}
+}
+@media(max-width:480px) {
+	.date-box {
+		width: 100%;
+	}
+	.nxt-pre {
+		width: 35%;
+	}
+	.rgm-pagi .date-box-cvr {
+		width: 65%;
+		float: left;
+	}
+	.search-box input {
+		width: 78%;
+		font-size: 10px;
+		height:30px;
+		padding-left: 30px;
+	}
+	.search-bar img {
+		width: 13px;
+		height: 13px;
+	}
+	.search-box button {
+		height: 30px;
+		padding: 0 10px
+	}
+	.rgm-pagi-cvr {
+		margin-top: 0;
+		margin-bottom: 5px;
+	}
+	.logout-link {
+		margin-left: 12px;
+	}
+	.logout-link img {
+		margin-left: 2px
+	}
+}
+
