@@ -1,0 +1,25 @@
+﻿@model IEnumerable<VMMAPI.Models.TransactionDetails>
+
+@{
+    Layout = null;
+}
+
+
+ @foreach (System.Data.DataRow dr in ViewBag.TransactionDetails.Rows)
+{
+<table style="font-family:Arial; border:1px solid black; width: 300px">
+    <tr>
+
+        <td>Before Image</td>
+        <td>
+            <img src="../VMMdocs/@dr["BImage"]" />
+        </td>
+        </tr>
+        <tr>
+        <td>After Image</td>
+        <td>
+            <img src="../VMMdocs/@dr["AImage"]" />
+        </td>
+    </tr>
+</table>
+}

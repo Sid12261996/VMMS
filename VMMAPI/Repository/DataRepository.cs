@@ -80,5 +80,21 @@ namespace VMMAPI.Repository
             connection.Close();
             return counter;
         }
+
+        public DataSet GetImage(TransactionDetails td)
+        {
+            DataSet ds = new DataSet();
+            SqlCommand cmd = new SqlCommand("usp_ImageGet", connection);
+            cmd.CommandType = CommandType.StoredProcedure;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            cmd.Parameters.AddWithValue("@TransactionNo", td.TransactionNo);
+            cmd.Parameters.AddWithValue("@AssestId", td.AssetsId);
+            cmd.Parameters.AddWithValue("@Activity", td.ActivityId);
+            cmd.Parameters.AddWithValue("@Description", td.Description);
+            connection.Open();
+            da.Fill(ds);
+            connection.Close();
+            return ds;
+        }
     }
 }
