@@ -2,7 +2,7 @@
 
 function ProccessingForOutPut(data)
 {
-    alert(data);
+    //console.log(data);
     AssetNo = []; TransNo = []; var AssestId = 'AssestId', TransactionNo = 'TransactionNo'; Activity = 'Activity';
     dummy = []; AssetKit = {}; Obj = {};
     arr1 = data;
@@ -190,7 +190,7 @@ function ProccessingForOutPut(data)
         })
         return toReturn;
     }
-    debugger;
+    //debugger;
     Obj = ReducingObjectOfObjects(Obj, false);
 
     Obj = ReducingObjectOfObjects(Obj, true);
@@ -198,5 +198,13 @@ function ProccessingForOutPut(data)
     console.log(Obj)
     Obj = GetOtherProperties();
     return Obj;
+}
+
+function OnpopUp(element) {
+    $("#" + element).modal();
+}
+function FindingNemo(arr, item) {
+    return arr[item]; 
+
 }
 

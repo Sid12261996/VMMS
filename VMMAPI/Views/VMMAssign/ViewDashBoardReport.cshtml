@@ -256,6 +256,45 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="ImageViewer">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                       
+                        <div class="row">
+
+                            <div class="box">
+                              
+                                <hr />
+                                <div class="box-body pt-0 pb-0">
+                                  
+                                        <div class="row">
+                                            <div class="box gapbox ">
+
+                                                <div class="col-sm-12">
+                                                
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="transferbtn" class="btn col-md-6 btn-greenbg pull-right"> <i class="fa fa-5x fa-spinner fa-spin" style="float:left; font-size:12px; margin-left:10px;display:none" id="tranWait"></i>Transfer</button>
+
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div>
+
     </section>
 
     <!-- jQuery before Propeller.js -->
@@ -325,7 +364,7 @@
         });
 
         function LoadTransaction(startDate, EndDate, CustName, City, State, Status) {
-            debugger;
+           
             $.ajax({
                 type: "POST",
 
@@ -336,6 +375,7 @@
                 dataType: "json",
                 success: function (data) {
                     debugger;
+                    console.log(data)
                     $("#PnlShowLeaveList").empty();
                     var table = $('#tblAttendance').DataTable();
                     table.destroy();
@@ -348,11 +388,13 @@
                     }
                     tempTable += "<th> Vendor </th>"
                     tempTable += "<th>State</th > <th>City</th>"
-                    tempTable += "<th> Status</th >"
+                    tempTable += "<th> Status</th ><th></th>"
                     tempTable += "<th> Host Name</th> <th>Check Antivirus Defination Version</th> <th>Check Windows Update Version</th> <th>Check C Drive Available Space</th> <th>Execute Temp.Files Deletation</th> <th>Execute Pre-Fatch Cleaning</th> <th>Execute Cookies Cleaning</th> <th>Check Earthing Voltage in Power Socket</th> <th>Clean Battery Terminal</th> <th>Check Cabinet Status ( Open/Close )</th> <th>Check Cables Redressing</th> <th>Check UPS Backup</th> <th>Check I/O port ( Damaged /Ok )</th> <th>Check Dusty Atmosphere/Machine ( Internal & External )</th> <th>Check Server Room Temperature</th> <th>Check HDD Bad Sectors</th> <th>Clean CPU Fan Dust</th> <th>Clean Machine Fan Dust</th> <th>Physical Assets Verification Activities</th> <th>Select Asset Type</th> <th>Select Asset Make</th> <th>Capture Asset Model no.</th> <th>Capture Asset product no.</th> <th>Capture Asset Serial no.</th> <th>Capture User Name</th> <th>Capture Employee Code</th> <th>Capture Department Name</th> <th>Capture User  Contact No.</th> <th>Select Asset Status</th> <th>Capture Operating System Name</th> <th>Capture RAM Capacity</th> <th>Capture RAM Quantity</th> <th>Capture HDD Capacity</th> <th>Capture HDD Quantity</th> <th>Capture processor Capacity</th> <th>Capture Processor Quantity</th> <th>Capture Host Name</th> <th>Capture IP Address</th> <th>Capture State</th> <th>Capture City</th> <th>Capture Region</th> <th>Capture Address</th> <th>Capture MS office version</th> <th>Select Availability of Asset</th> <th>Capture user Email ID</th> <th>Capture Asset Branch Code</th>"
                     tempTable += "</tr ></thead > ";
                     // CODE FROM //
-                    var Obj = ProccessingForOutPut(data);
+                    var Obj = ProccessingForOutPut(data.Other);
+                    console.log(Obj);
+                    var descriptionLink = data.Description;
                     Object.keys(Obj).forEach(function (item) {
                     Object.keys(Obj[item].Assets).forEach((key) => {
 
@@ -369,24 +411,59 @@
                                 <td style='width:250px'>${Obj[item].City} </td>
                                 <td style='width:250px'>${Obj[item].DND} </td>`;
                               
-                            // <td style='width:250px'></td>`;
-                            //tempTable += "<td style='width:250px'>" + item.Description + "</td>";
-                            console.log(Obj[item].TransactionNo)
+                           
                             var description = Obj[item].Assets[key];
                             var num = [];
+
+                        if (description.length > 1) {
                             description.forEach((t) => {
-                                num.push(t.split('*#*')[1]);
+                                num.push(parseInt(t.split('*#*')[1]));
 
                             });
                             num.sort(function (a, b) { return a - b });
+                            description.sort((a, b) => {
+
+                                t1 = parseInt(a.split('*#*')[1]);
+                                t2 = parseInt(b.split('*#*')[1]);
+                                //console.log("here is a",t1,t2)
+                                return t1 - t2
+                            })
+
+
+                            var cnt = 1;
                             description.forEach((ele, index) => {
 
+                                var count = 0;
+                                if (cnt == 1) {
+                                    for (let i = 0; i < num[0]; i++) {
+                                        cnt++;
+                                        count++;
+                                        console.log(`messaeg${num[0]}`)
+                                        tempTable += "<td style='width:250px'></td>"
+                                    }
+                                    tempTable += `<td style='width:250px'> <a  href="#"> ${ele.split('*#*')[0]}</a></td>`;
+                                } else {
+                                    //console.log(`${num[1]-num[0]}add started ${index} \n${count}`)
+                                    for (let i = 0; i < (num[index] - num[index - 1])-1; i++) {
 
-                                for (var i = 1; i < (num[index + 1] - num[index]); i++) {
-                                    tempTable += "<td style='width:250px'></td>"
+                                        cnt++;
+                                        tempTable += "<td style='width:250px'></td>"
+                                    }
+                                    tempTable += `<td style='width:250px'> <a  href="#"> ${ele.split('*#*')[0]}</a></td>`;
                                 }
-                                tempTable += "<td style='width:250px'><a href='https://www.w3schools.com/html/'>" + ele.split('*#*')[0] + "</a></td>";
+                                // console.log("add finisheed",cnt)
+
                             });
+                        }
+                        else {
+                            console.log("else")
+                            var num = parseInt(description.split('*#*')[1])
+                            for (var i = 0; i < num - 1; i++) {
+
+                                tempTable += "<td style='width:250px'></td>"
+                            }
+                            tempTable += `<td style='width:250px'> <a  href="#"> ${ele.split('*#*')[0]}</a></td>`;
+                        }
 
                             tempTable += "</tr>";
                             tempTable += "";
@@ -399,8 +476,8 @@
 
 
                     // END
-                    tempTable += "</tbody>";
-                    tempTable += "</table>";
+                    tempTable += "</tbody> </table>";
+                  
                     $("#PnlShowLeaveList").append(tempTable);
 
 

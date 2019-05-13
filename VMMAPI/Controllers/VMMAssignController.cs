@@ -203,7 +203,7 @@ namespace VMMAPI.Controllers
 
             var dict = new List<Dictionary<string, string[]>>();
            
-            string myData = datatable.Rows[0][9].ToString();
+            //string myData = datatable.Rows[0][9].ToString();
             if (datatable.Rows.Count > 0)
             {
                 
