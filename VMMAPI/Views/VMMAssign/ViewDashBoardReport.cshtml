@@ -393,15 +393,15 @@
                     tempTable += "</tr ></thead > ";
                     // CODE FROM //
                     var Obj = ProccessingForOutPut(data.Other);
-                    console.log(Obj);
-                    var descriptionLink = data.Description;
+                    //console.log(Obj);
+                   
                     Object.keys(Obj).forEach(function (item) {
-                    Object.keys(Obj[item].Assets).forEach((key) => {
-
+                        Object.keys(Obj[item].Assets).forEach((key, i) => {
+                            console.log(Obj[item].AssetsType[key][0], "G")
                             tempTable += "<tr>";
                             tempTable += `<td style='width:250px'> ${Obj[item].TransactionNo} <input id='HiddenVendorId' type='hidden' name='HiddenVendorId'  value=" + item.TransactionNo + " /></td>
                                 <td style='width:250px'>${ key} </td>
-                                <td style='width:250px'>${ Obj[item].AssetsType} </td>`
+                                <td style='width:250px'>${ Obj[item].AssetsType[key][i]} </td>`
                                  if (@usertype== 1) {
                                   tempTable += `<td style='width:250px'>${Obj[item].CustName}</td>`
                                   }
@@ -437,7 +437,7 @@
                                 if (cnt == 1) {
                                     for (let i = 0; i < num[0]; i++) {
                                         cnt++;
-                                        count++;
+                                        
                                         console.log(`messaeg${num[0]}`)
                                         tempTable += "<td style='width:250px'></td>"
                                     }
