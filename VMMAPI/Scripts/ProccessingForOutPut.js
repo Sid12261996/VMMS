@@ -1,12 +1,13 @@
 ﻿
 
-function ProccessingForOutPut(data)
-{
+
+function ProccessingForOutPut(data) {
     //console.log(data);
     AssetNo = []; TransNo = []; var AssestId = 'AssestId', TransactionNo = 'TransactionNo'; Activity = 'Activity';
     dummy = []; AssetKit = {}; Obj = {};
     arr1 = data;
-    arr1.forEach((item, index) => { if (dummy.includes(item[AssestId])) {
+    arr1.forEach((item, index) => {
+        if (dummy.includes(item[AssestId])) {
 
             var Trans = item[TransactionNo], Ass = item[AssestId];
             if (AssetKit[Ass + ' ' + Trans] == undefined) {
@@ -150,16 +151,37 @@ function ProccessingForOutPut(data)
 
     }
 
+    function AddingAssetType(TransId, AssetId) {
+        RetObj = {}
+
+        for (let id of AssetId) {
+            AssetType = []
+
+            arr1.filter((item, i) => {
+                //console.log(TransId)
+                if (item[TransactionNo] == TransId && item[AssestId] == id) {
+                    AssetType.push(item['AssetsType']);
+
+                }
+            })
+            RetObj[id] = AssetTypes;
+        }
+        //console.log(AssetType,"AsT");
+        return RetObj;
+    }
+
     function findtheProperties(key, a) {
         debugger;
         toReturn = {};
+        //console.log(Object.keys(a),"K")
         arr1.find((item) => {
             if (item['TransactionNo'] == key) {
 
 
                 toReturn["TransactionNo"] = item["TransactionNo"];
                 toReturn["TaskName"] = item["TaskName"];
-                toReturn["AssetsType"] = item["AssetsType"];
+                toReturn["AssetsType"] = AddingAssetType(key, Object.keys(a));
+
                 toReturn["CusId"] = item["CusId"];
                 toReturn["AssignToNew"] = item["AssignToNew"];
                 toReturn["CustName"] = item["CustName"];
@@ -195,9 +217,11 @@ function ProccessingForOutPut(data)
 
     Obj = ReducingObjectOfObjects(Obj, true);
     Obj = ReducingObjectOfObjects(Obj, false, true);
-    console.log(Obj)
+
     Obj = GetOtherProperties();
+    console.log(Obj)
     return Obj;
+
 }
 
 function OnpopUp(element) {
