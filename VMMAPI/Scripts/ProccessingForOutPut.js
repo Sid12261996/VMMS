@@ -164,9 +164,9 @@ function ProccessingForOutPut(data) {
 
                 }
             })
-            RetObj[id] = AssetTypes;
+            RetObj[id] = AssetType;
         }
-        //console.log(AssetType,"AsT");
+        console.log(RetObj,"AsT");
         return RetObj;
     }
 
