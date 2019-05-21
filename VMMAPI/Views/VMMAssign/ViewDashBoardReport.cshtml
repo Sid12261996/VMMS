@@ -396,81 +396,82 @@
                     //console.log(Obj);
                    
                     Object.keys(Obj).forEach(function (item) {
-                        Object.keys(Obj[item].Assets).forEach((key, i) => {
-                            console.log(Obj[item].AssetsType[key][i], "G")
-                            tempTable += "<tr>";
-                            tempTable += `<td style='width:250px'> ${Obj[item].TransactionNo} <input id='HiddenVendorId' type='hidden' name='HiddenVendorId'  value=" + item.TransactionNo + " /></td>
+                        Object.keys(Obj[item].Assets).forEach((key) => {
+                            Obj[item].AssetsType[key].forEach((index, i) => {
+                                console.log(index, "G")
+                                tempTable += "<tr>";
+                                tempTable += `<td style='width:250px'> ${Obj[item].TransactionNo} <input id='HiddenVendorId' type='hidden' name='HiddenVendorId'  value=" + item.TransactionNo + " /></td>
                                 <td style='width:250px'>${ key} </td>
-                                <td style='width:250px'>${ Obj[item].AssetsType[key][i]} </td>`
-                                 if (@usertype== 1) {
-                                  tempTable += `<td style='width:250px'>${Obj[item].CustName}</td>`
-                                  }
-                               
-                               tempTable += `<td style='width:250px'>${Obj[item].Name} </td>
+                                <td style='width:250px'>${ index} </td>`
+                                if (@usertype== 1) {
+                                    tempTable += `<td style='width:250px'>${Obj[item].CustName}</td>`
+                                }
+
+                                tempTable += `<td style='width:250px'>${Obj[item].Name} </td>
                                 <td style='width:250px'>${Obj[item].State} </td>
                                 <td style='width:250px'>${Obj[item].City} </td>
                                 <td style='width:250px'>${Obj[item].DND} </td>`;
-                              
-                           
-                            var description = Obj[item].Assets[key];
-                            var num = [];
-
-                        if (description.length > 1) {
-                            description.forEach((t) => {
-                                num.push(parseInt(t.split('*#*')[1]));
-
-                            });
-                            num.sort(function (a, b) { return a - b });
-                            description.sort((a, b) => {
-
-                                t1 = parseInt(a.split('*#*')[1]);
-                                t2 = parseInt(b.split('*#*')[1]);
-                                //console.log("here is a",t1,t2)
-                                return t1 - t2
-                            })
 
 
-                            var cnt = 1;
-                            description.forEach((ele, index) => {
+                                var description = Obj[item].Assets[key];
+                                var num = [];
 
-                                
-                                if (cnt == 1) {
-                                    for (let i = 0; i < num[0]; i++) {
-                                        cnt++;
-                                        
-                                        console.log(`messaeg${num[0]}`)
-                                        tempTable += "<td style='width:250px'></td>"
-                                    }
-                                    tempTable += `<td style='width:250px'> <a  href="#"> ${ele.split('*#*')[0]}</a></td>`;
-                                } else {
-                                    //console.log(`${num[1]-num[0]}add started ${index} \n${count}`)
-                                    for (let i = 0; i < (num[index] - num[index - 1])-1; i++) {
+                                if (description.length > 1) {
+                                    description.forEach((t) => {
+                                        num.push(parseInt(t.split('*#*')[1]));
 
-                                        cnt++;
+                                    });
+                                    num.sort(function (a, b) { return a - b });
+                                    description.sort((a, b) => {
+
+                                        t1 = parseInt(a.split('*#*')[1]);
+                                        t2 = parseInt(b.split('*#*')[1]);
+                                        //console.log("here is a",t1,t2)
+                                        return t1 - t2
+                                    })
+
+
+                                    var cnt = 1;
+                                    description.forEach((ele, index) => {
+
+
+                                        if (cnt == 1) {
+                                            for (let i = 0; i < num[0]; i++) {
+                                                cnt++;
+
+                                                console.log(`messaeg${num[0]}`)
+                                                tempTable += "<td style='width:250px'></td>"
+                                            }
+                                            tempTable += `<td style='width:250px'> <a  href="#"> ${ele.split('*#*')[0]}</a></td>`;
+                                        } else {
+                                            //console.log(`${num[1]-num[0]}add started ${index} \n${count}`)
+                                            for (let i = 0; i < (num[index] - num[index - 1]) - 1; i++) {
+
+                                                cnt++;
+                                                tempTable += "<td style='width:250px'></td>"
+                                            }
+                                            tempTable += `<td style='width:250px'> <a  href="#"> ${ele.split('*#*')[0]}</a></td>`;
+                                        }
+                                        // console.log("add finisheed",cnt)
+
+                                    });
+                                }
+                                else {
+                                    console.log("else")
+                                    var num = parseInt(description.split('*#*')[1])
+                                    for (var i = 0; i < num - 1; i++) {
+
                                         tempTable += "<td style='width:250px'></td>"
                                     }
                                     tempTable += `<td style='width:250px'> <a  href="#"> ${ele.split('*#*')[0]}</a></td>`;
                                 }
-                                // console.log("add finisheed",cnt)
 
-                            });
-                        }
-                        else {
-                            console.log("else")
-                            var num = parseInt(description.split('*#*')[1])
-                            for (var i = 0; i < num - 1; i++) {
+                                tempTable += "</tr>";
+                                tempTable += "";
 
-                                tempTable += "<td style='width:250px'></td>"
-                            }
-                            tempTable += `<td style='width:250px'> <a  href="#"> ${ele.split('*#*')[0]}</a></td>`;
-                        }
-
-                            tempTable += "</tr>";
-                            tempTable += "";
+                            })
 
                         });
-
-
                     });
 
 

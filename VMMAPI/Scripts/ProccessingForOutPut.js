@@ -159,14 +159,16 @@ function ProccessingForOutPut(data) {
 
             arr1.filter((item, i) => {
                 //console.log(TransId)
+
                 if (item[TransactionNo] == TransId && item[AssestId] == id) {
                     AssetType.push(item['AssetsType']);
 
                 }
             })
+            AssetType = ReduceSingleCountArray(AssetType);
             RetObj[id] = AssetType;
         }
-        console.log(RetObj,"AsT");
+
         return RetObj;
     }
 

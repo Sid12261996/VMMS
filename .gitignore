@@ -259,3 +259,8 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+storage.ide-wal
+storage.ide-shm
+
+VMMS/.vs
