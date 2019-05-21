@@ -397,7 +397,7 @@
                    
                     Object.keys(Obj).forEach(function (item) {
                         Object.keys(Obj[item].Assets).forEach((key, i) => {
-                            console.log(Obj[item].AssetsType[key][0], "G")
+                            console.log(Obj[item].AssetsType[key][i], "G")
                             tempTable += "<tr>";
                             tempTable += `<td style='width:250px'> ${Obj[item].TransactionNo} <input id='HiddenVendorId' type='hidden' name='HiddenVendorId'  value=" + item.TransactionNo + " /></td>
                                 <td style='width:250px'>${ key} </td>
