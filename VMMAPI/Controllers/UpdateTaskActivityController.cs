@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -31,11 +32,11 @@ namespace VMMAPI.Controllers
         {
             // Check if the request contains multipart/form-data.
             DataUtility du = new DataUtility();
-            
+
             DataTable dtList = new DataTable();
-          string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
-          SqlCommand cmdObj;
-            
+            string conn = ConfigurationManager.ConnectionStrings["constr"].ConnectionString;
+            SqlCommand cmdObj;
+
             var provider = await Request.Content.ReadAsMultipartAsync<InMemoryMultipartFormDataStreamProvider>(new InMemoryMultipartFormDataStreamProvider());
             //access form data
             NameValueCollection formData = provider.FormData;
@@ -51,8 +52,8 @@ namespace VMMAPI.Controllers
             obj.DND = formData["DND"].ToString();
             obj.HostName = formData["HostName"].ToString();
             obj.Description = formData["Description"].ToString();
-            obj.FaultyDesc = formData["FaultyDesc"].ToString(); 
-            obj.ActualAssetsId= formData["ActualAssetsId"].ToString();
+            obj.FaultyDesc = formData["FaultyDesc"].ToString();
+            obj.ActualAssetsId = formData["ActualAssetsId"].ToString();
             obj.AssestTypeId = formData["AssestTypeId"].ToString();
             string BImagePath = string.Empty;
             string AImagePath = string.Empty;
@@ -69,11 +70,11 @@ namespace VMMAPI.Controllers
 
                     string dirFullPath = directoryName;
                     bool folderExists = Directory.Exists(directoryName + "\\" + obj.TransactionNo + "\\" + obj.AssestTypeId + "\\" + obj.AssetsId + "\\" + obj.ActivityId);
-                    
+
                     if (!folderExists)
                     {
                         Directory.CreateDirectory(directoryName + "\\" + obj.TransactionNo + "\\" + obj.AssestTypeId + "\\" + obj.AssetsId + "\\" + obj.ActivityId);
-                        
+
                     }
 
 
@@ -87,12 +88,13 @@ namespace VMMAPI.Controllers
                     if (i == 0)
                     {
 
-                        BImagePath = System.IO.Path.Combine(  "\\" + obj.TransactionNo + "\\" + obj.AssestTypeId + "\\" + obj.AssetsId + "\\" + obj.ActivityId, thisFileName); ;
-                    
-}
+                        BImagePath = System.IO.Path.Combine("\\" + obj.TransactionNo + "\\" + obj.AssestTypeId + "\\" + obj.AssetsId + "\\" + obj.ActivityId, thisFileName); ;
+
+                    }
                     else if (i == 1)
 
-                    { AImagePath = filename;
+                    {
+                        AImagePath = filename;
 
 
                         AImagePath = System.IO.Path.Combine("\\" + obj.TransactionNo + "\\" + obj.AssestTypeId + "\\" + obj.AssetsId + "\\" + obj.ActivityId, thisFileName); ;
@@ -172,23 +174,32 @@ namespace VMMAPI.Controllers
             cmdObj.Parameters
           .Add(new SqlParameter("@AssestTypeId", SqlDbType.NVarChar))
           .Value = obj.AssestTypeId;
-            
+
 
             SqlParameter outputParam = cmdObj.Parameters.Add("@ERROR", SqlDbType.Int);
             outputParam.Direction = ParameterDirection.Output;
 
 
-             //cmdObj = new SqlCommand();
+            //cmdObj = new SqlCommand();
             //cmdObj.CommandText = "[usp_DescriptionMaster]";
 
             if (du.ExecuteSqlProcedure(cmdObj))
             {
-              
-                return obj.ActivityId;
+                string Success = outputParam.Value.ToString();
+                if (Success == "1")
+                {
+                    return obj.ActivityId;
+                }
+                else
+                {
+                    var msg = new HttpResponseMessage(HttpStatusCode.NoContent) { ReasonPhrase = "Invalid Data" };
+                    return msg;
+                }
+                //  
             }
             else
             {
-                 var msg = new HttpResponseMessage(HttpStatusCode.NotImplemented) { ReasonPhrase = "Error While insertion" };
+                var msg = new HttpResponseMessage(HttpStatusCode.NotImplemented) { ReasonPhrase = "Error While insertion" };
                 return msg;
             }
 

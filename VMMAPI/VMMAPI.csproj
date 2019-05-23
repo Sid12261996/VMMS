@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VMMAPI</RootNamespace>
     <AssemblyName>VMMAPI</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -26,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <Use64BitIISExpress />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,14 +81,13 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
@@ -141,6 +141,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="Vse.Web.Serialization, Version=1.0.4.0, Culture=neutral, PublicKeyToken=fb838febb49f46b2, processorArchitecture=MSIL">
       <HintPath>..\packages\Vse.Web.Serialization.ControlledSerializationJsonConverter.1.0.4\lib\net45\Vse.Web.Serialization.dll</HintPath>
       <Private>True</Private>
@@ -533,6 +534,7 @@
     <Content Include="components\select2\README.md" />
     <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\VMMapi.pubxml" />
+    <None Include="Properties\PublishProfiles\VMMPublish.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -548,28 +550,22 @@
     <Content Include="VmmAssets\css\propeller.min.css" />
     <Content Include="VmmAssets\css\responsive.css" />
     <Content Include="VmmAssets\css\style.css" />
-    <Content Include="VmmAssets\images\activity-category.png" />
-    <Content Include="VmmAssets\images\activity-type.png" />
-    <Content Include="VmmAssets\images\admin-portal-icon.png" />
-    <Content Include="VmmAssets\images\bg-image.png" />
-    <Content Include="VmmAssets\images\chang-pass-icon.png" />
-    <Content Include="VmmAssets\images\city.png" />
-    <Content Include="VmmAssets\images\date.png" />
-    <Content Include="VmmAssets\images\form-hd-bg.png" />
-    <Content Include="VmmAssets\images\Group 8432.png" />
-    <Content Include="VmmAssets\images\health-chk-act.png" />
-    <Content Include="VmmAssets\images\list.png" />
-    <Content Include="VmmAssets\images\logo.png" />
-    <Content Include="VmmAssets\images\logout-icon.png" />
-    <Content Include="VmmAssets\images\mail-icon.png" />
-    <Content Include="VmmAssets\images\new-task-icon.png" />
-    <Content Include="VmmAssets\images\no-of-activities.png" />
-    <Content Include="VmmAssets\images\no.-of-tasks.png" />
-    <Content Include="VmmAssets\images\password-icon.png" />
-    <Content Include="VmmAssets\images\pic-icon.png" />
-    <Content Include="VmmAssets\images\profile-icon.png" />
-    <Content Include="VmmAssets\images\user-icon.png" />
-    <Content Include="VmmAssets\images\user-name-icon.png" />
+    <Content Include="VmmAssets\images\activity_type.svg" />
+    <Content Include="VmmAssets\images\bg_image.png" />
+    <Content Include="VmmAssets\images\desktop_image.svg" />
+    <Content Include="VmmAssets\images\form_bg_image.svg" />
+    <Content Include="VmmAssets\images\health_chk_act.svg" />
+    <Content Include="VmmAssets\images\list_icon.svg" />
+    <Content Include="VmmAssets\images\location_icon.svg" />
+    <Content Include="VmmAssets\images\New Task icon.png" />
+    <Content Include="VmmAssets\images\new_task_icon.svg" />
+    <Content Include="VmmAssets\images\password_icon.svg" />
+    <Content Include="VmmAssets\images\phone_icon.svg" />
+    <Content Include="VmmAssets\images\team_blue_logo.svg" />
+    <Content Include="VmmAssets\images\team_logo.svg" />
+    <Content Include="VmmAssets\images\user_icon.svg" />
+    <Content Include="VmmAssets\images\user_name_icon.svg" />
+    <Content Include="VmmAssets\images\VMM_logo.svg" />
     <Content Include="VmmAssets\js\jquery.nicescroll.min.js" />
     <Content Include="VmmAssets\js\propeller.min.js" />
     <Content Include="Web.config">
@@ -598,6 +594,7 @@
     <Content Include="Views\IE\AddIE.cshtml" />
     <Content Include="Views\IE\IEGET.cshtml" />
     <Content Include="Views\IE\UpdateIE.cshtml" />
+    <Content Include="Views\Shared\NavHeader.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

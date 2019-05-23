@@ -157,7 +157,7 @@ nav.pmd-navbar .navbar-nav > li > a:hover, nav.pmd-navbar .navbar-nav > li > a.a
     background: none;
     content: '';
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 7px;
 }
 
 .sel-dat .pmd-switch label .pmd-switch-label::after {
@@ -252,7 +252,7 @@ nav.pmd-navbar .navbar-nav > li > a:hover, nav.pmd-navbar .navbar-nav > li > a.a
     }
 
 .res-box .form-group label {
-    color: rgba(106, 10, 212, 1);
+    color: #00abc5;
 }
 
 .res-box .form-group img {
@@ -751,6 +751,68 @@ label.container1 {
         text-align: center;
         transition: all .5s ease-in-out;
     }
+
+.inp .pmd-textfield input.form-control {
+    height: 34px;
+}
+
+.inp .btn, .inp .btn.pmd-btn-raised {
+    background: #00abc5;
+    border: 1px solid #00abc5;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    padding: 10px 30px;
+    border-radius: 3px;
+    margin-top: 17px;
+    box-shadow: none;
+}
+
+    .inp .btn:hover, .inp .btn:focus, .inp .btn:hover, .inp .btn:hover, .inp .dt-buttons .dt-button:focus, .inp .dt-buttons .dt-button:hover {
+        background: transparent;
+        border: 1px solid #00abc5;
+        color: #00abc5;
+    }
+
+.inp .dt-buttons .dt-button {
+    background: #00abc5;
+    border: 1px solid #00abc5;
+    color: #fff;
+    transition: all .3s ease-in-out;
+    padding: 10px 30px;
+    border-radius: 3px;
+    margin-top: 17px;
+    box-shadow: none;
+    line-height: 1.1;
+}
+
+.inp .dataTables_filter label {
+    color: #00abc5;
+}
+
+.inp .dataTables_filter input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+    .inp .dataTables_filter input:focus {
+        border-bottom: 1px solid #00abc5;
+    }
+
+.inp .dataTables_wrapper {
+    background: #fff;
+    padding: 10px;
+}
+
+.inp table.dataTable.no-footer {
+    border-bottom: 1px solid #ccc;
+}
+
+.dataTable i {
+    font-size: 18px;
+    color: #00abc5;
+    padding-right: 5px
+}
 /*call details*/
 .sta-hdr label a {
     color: #4C1C9C;
@@ -962,7 +1024,7 @@ label.container1 {
     position: relative;
     border: 1px solid #00abc5;
     border-radius: 50px;
-    margin-top: 10px;
+    margin-top: 7px;
 }
 
     .rad-btn .checkmark {
@@ -1114,4 +1176,34 @@ label.container1 {
 
 .faq a:hover {
     text-decoration: none;
+}
+
+.tblAttendance {
+    background: #fff;
+}
+
+.table-normal {
+    overflow: auto;
+    max-height: 350px;
+}
+
+    .table-normal tr td, .table-normal tr th {
+        padding: 5px 10px !important;
+    }
+
+
+    .table-normal1 .table > tbody > tr > td, .table-normal1 .table > thead > tr > th {
+        min-width: 120px;
+    }
+
+        .table-normal1 .table > tbody > tr > td.cust-width {
+            min-width: 300px;
+        }
+
+        .table-normal1 .table > tbody > tr > td.cust-width1 {
+            min-width: 200px;
+        }
+
+.inp .table-normal table.dataTable {
+    background: #fff;
 }

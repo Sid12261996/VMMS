@@ -347,7 +347,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="../VmmAssets/images/city.png" alt="city icon"> <span>Location</span>
+                                        <img src="../VmmAssets/images/city.png" alt="city icon"> <span>City</span>
                                     </td>
                                     <td><span id="spnLocation"></span></td>
                                 </tr>
@@ -551,7 +551,7 @@
 
 
         function Manager_Remarks_(Activityid, Remarks, Status, AssetsId) {
-            debugger;
+         
             var actasset = AssetsId;
 
            
@@ -639,8 +639,7 @@
 
                     $("#pnlPhysical").append("<div id='divp" + i + "'> </div>");
                     $("#divp" + i + "").append("<div id='divMp" + i + "'> </div>").addClass("hcr-rep");
-                    $("#divMp" + i + "").append("<span id='spnact" + i + "'>" + item.TaskName + "</span> <input id='HiddenDateP" + i + "' type='hidden' name='HiddenDateP'  value=" + item.ActDate + " />").addClass("hca-hd");
-
+                    $("#divMp" + i + "").append("<span id='spnact" + i + "'>" + item.TaskName + '(' + item.assestid + ')' + "</span> <input id='HiddenDateP" + i + "' type='hidden' name='HiddenDateP'  value=" + item.ActDate + " />").addClass("hca-hd");
                     $("#divp" + i + "").append("<div id='divLp" + i + "'> </div>");
 
                     $("#divLp" + i + "").append("<div id='divBImgp" + i + "'> </div>").addClass("hca-content clearfix");
@@ -798,8 +797,7 @@
 
                     $("#pnlHealth").append("<div id='div" + i + "'> </div>");
                     $("#div" + i + "").append("<div id='divM" + i + "'> </div>").addClass("hcr-rep");
-                    $("#divM" + i + "").append("<span id='spnactphy" + i + "'>" + item.TaskName + '(' + item.AssestId + ')'  + "</span><input id='HiddenDatePhy" + i + "' type='hidden' name='HiddenDatePhy'  value=" + item.ActDate + " />").addClass("hca-hd");
-
+                  $("#divM" + i + "").append("<span id='spnactphy" + i + "'>" + item.TaskName + '(' + item.assestid + ')'  + "</span><input id='HiddenDatePhy" + i + "' type='hidden' name='HiddenDatePhy'  value=" + item.ActDate + " />").addClass("hca-hd");
                     $("#div" + i + "").append("<div id='divL" + i + "'> </div>");
 
                     $("#divL" + i + "").append("<div id='divBImg" + i + "'> </div>").addClass("hca-content clearfix");

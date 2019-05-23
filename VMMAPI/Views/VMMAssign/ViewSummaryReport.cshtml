@@ -41,6 +41,12 @@
     <link href="../VmmAssets/css/style.css" rel="stylesheet">
     <link href="../VmmAssets/css/responsive.css" rel="stylesheet">
     <link href="../VmmAssets/css/propeller.min.css" rel="stylesheet" />
+
+
+    <!-- Select2 css-->
+    <link rel="stylesheet" type="text/css" href="../components/select2/css/select2.min.css" />
+    <link rel="stylesheet" type="text/css" href="../components/select2/css/select2-bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../components/select2/css/pmd-select2.css" />
 </head>
 
 <body>
@@ -48,71 +54,94 @@
         <nav class="navbar navbar-fixed-top pmd-navbar pmd-z-depth">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button class="pmd-ripple-effect navbar-toggle pmd-navbar-toggle" type="button">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="javascript:void(0);" class="navbar-brand navbar-brand-custome">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="54" height="54" viewBox="0 0 54 54">
-                            <defs>
-                                <style>
-                                    .a {
-                                        fill: #279d82;
-                                    }
 
-                                    .b {
-                                        opacity: 0.14;
-                                    }
+                <nav class="navbar navbar-fixed-top pmd-navbar pmd-z-depth">
+                    <div class="container-fluid">
+                        <input type="hidden" id="taskidhidden" />
+                        <input type="hidden" id="AssetsIdHidden" />
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button class="pmd-ripple-effect navbar-toggle pmd-navbar-toggle" type="button">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="javascript:void(0);" class="navbar-brand navbar-brand-custome">
+                                <img src="~/VmmAssets/images/team_blue_logo.svg" alt="team blue logo"><span class="logo-txt">Project Governance</span>
+                            </a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse pmd-navbar-sidebar">
+                            <div class="dropdown pmd-dropdown pmd-user-info pull-right">
+                                <a href="javascript:void(0);" class="btn-user dropdown-toggle media" data-toggle="dropdown" data-sidebar="true" aria-expanded="false">
+                                    <div class="media-left">
 
-                                    .c {
-                                        fill: #d3d4d7;
-                                    }
+                                        @using (Html.BeginForm("Logout", "VMMAssign", FormMethod.Post))
+                                        {
+                                            <!-- form goes here -->
 
-                                    .d, .i {
-                                        fill: #fff;
-                                    }
 
-                                    .e {
-                                        fill: #1e212a;
-                                    }
 
-                                    .f, .g, .h {
-                                        opacity: 0.54;
-                                    }
+                                            <input type="submit" value="" class="logout-icon" />
 
-                                    .f {
-                                        fill: url(#c);
-                                    }
 
-                                    .g {
-                                        fill: url(#d);
-                                    }
+                                        }
+                                    </div>
 
-                                    .h {
-                                        fill: url(#e);
-                                    }
+                                </a>
 
-                                    .i {
-                                        opacity: 0.16;
-                                    }
+                            </div>
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a class="pmd-ripple-effect " href="@Url.Action("AssignTaskNew1", "VMMAssign")" ;">
+                                        <i class="material-icons">
+                                            add
+                                        </i> <span>Assign New</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="pmd-ripple-effect " href="@Url.Action("ShowTransactionDetails", "VMMAssign")" ;">
+                                        <span>In Progress</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="pmd-ripple-effect active" href="@Url.Action("ViewSummaryReport", "VMMAssign")" ;">
+                                        <span>Summary</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="pmd-ripple-effect" href="@Url.Action("ViewDashBoardReport", "VMMAssign")" ;">
+                                        <span>Detailed Report</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="pmd-ripple-effect" href="@Url.Action("AddIE", "IE")" ;">
+                                        <span>IE</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="pmd-ripple-effect" href="#" ;">
+                                        <span>Dashboard</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="pmd-ripple-effect" href="#" ;">
+                                        <span>Customer Report</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="pmd-ripple-effect" href="#" ;">
+                                        <span>Engineer Report</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div><!-- /.navbar-collapse -->
+                    </div><!-- /.container-fluid -->
+                    <div class="pmd-sidebar-overlay"></div>
+                </nav>
 
-                                    .j {
-                                        filter: url(#a);
-                                    }
-                                </style>
-                                <filter id="a" x="0" y="0" width="54" height="54" filterUnits="userSpaceOnUse"><feOffset dy="3" input="SourceAlpha" /><feGaussianBlur stdDeviation="3" result="b" /><feFlood flood-opacity="0.071" /><feComposite operator="in" in2="b" /><feComposite in="SourceGraphic" /></filter>
-                                <linearGradient id="c" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#fff" stop-opacity="0.161" /><stop offset="1" stop-color="#1e212a" stop-opacity="0" /></linearGradient>
-                                <linearGradient id="d" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox"><stop offset="0" stop-opacity="0.161" /><stop offset="1" stop-color="#1e212a" stop-opacity="0" /></linearGradient>
-                                <linearGradient id="e" x1="0" y1="0.5" x2="1" y2="0.5" xlink:href="#d" />
-                            </defs>
-                            <g transform="translate(9 6)"><g class="j" transform="matrix(1, 0, 0, 1, -9, -6)"><ellipse class="a" cx="18" cy="18" rx="18" ry="18" transform="translate(9 6)" /></g><path class="b" d="M5495.023,2198.976a18,18,0,0,0,17.175-20.444h0l-7.075-7.114-21.517,12.842,4.34,4.363-1.795,1.434Z" transform="translate(-5476.367 -2162.989)" /><ellipse class="c" cx="0.3" cy="0.3" rx="0.3" ry="0.3" transform="translate(17.7 20.7)" /><g transform="translate(7.2 8.383)"><path class="d" d="M5488.979,2190.173h13.461v.588h-13.461Z" transform="translate(-5484.91 -2176.061)" /><path class="e" d="M.2,0H21.4a.2.2,0,0,1,.2.2V10.584a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V.2A.2.2,0,0,1,.2,0Z" transform="translate(0)" /><path class="d" d="M0,0H21.6a0,0,0,0,1,0,0V2.15a.2.2,0,0,1-.2.2H.2a.2.2,0,0,1-.2-.2V0A0,0,0,0,1,0,0Z" transform="translate(0 10.584)" /><path class="e" d="M5492.944,2188.605h7.514v1.176h-7.514Z" transform="translate(-5485.901 -2175.669)" /><path class="f" d="M5505,2184.293h-6.886v1.176h2.974v.588h-13.461v-.588h2.974v-1.176h-6.886a.152.152,0,0,1-.157-.147V2171.5a.152.152,0,0,1,.157-.147H5505a.153.153,0,0,1,.157.147v12.642A.153.153,0,0,1,5505,2184.293Z" transform="translate(-5483.553 -2171.357)" /><path class="d" d="M5503.127,2194.135l-1.093.653-.006.8,1.093.68h3.46v-2.133Z" transform="translate(-5488.172 -2177.052)" /><g transform="translate(2.343 17.084)"><g transform="translate(6.944 0.718)"><path class="d" d="M5495.937,2195.093v.675h4.568l.007-.675Z" transform="translate(-5495.937 -2195.093)" /><path class="g" d="M5495.937,2195.093v.675h4.568l.007-.675Z" transform="translate(-5495.937 -2195.093)" /></g><path class="e" d="M5487.9,2194.357c-.673,0-1.22.4-1.22.9s.547.9,1.22.9h5.724v-1.8Z" transform="translate(-5486.679 -2194.19)" /><path class="h" d="M5503.131,2194.135l-1.093.653-.005.8,1.093.68h3.458v-2.133Z" transform="translate(-5490.517 -2194.135)" /></g><g transform="translate(7.05 2.482)"><path class="a" d="M5493.879,2177.877a1.623,1.623,0,0,0,.678.281v.259h.544v-.259a1.622,1.622,0,0,0,.678-.281l.183.183.385-.385-.182-.183a1.643,1.643,0,0,0,.28-.677h.259v-.545h-.259a1.65,1.65,0,0,0-.28-.678l.182-.182-.385-.385-.183.183a1.63,1.63,0,0,0-.678-.281v-.259h-.544v.259a1.631,1.631,0,0,0-.678.281l-.183-.183-.386.385.184.182a1.632,1.632,0,0,0-.281.678h-.258v.545h.258a1.625,1.625,0,0,0,.281.677l-.184.183.386.385Zm.444-1.841a.715.715,0,1,1,0,1.011A.715.715,0,0,1,5494.324,2176.035Z" transform="translate(-5492.955 -2174.666)" /><path class="i" d="M5493.879,2178.061a1.62,1.62,0,0,0,.678.281v.259h.544v-.259a1.619,1.619,0,0,0,.678-.281l.183.183.191-.191-.821-.82a.715.715,0,0,1-1.011-1.01l-.821-.821-.19.191.184.182a1.634,1.634,0,0,0-.281.678h-.258V2177h.258a1.628,1.628,0,0,0,.281.678l-.184.183.386.385.183-.183Z" transform="translate(-5492.955 -2174.85)" /><g transform="translate(3.75 2.25)"><path class="a" d="M5498.88,2180.877a1.623,1.623,0,0,0,.678.281v.259h.544v-.259a1.628,1.628,0,0,0,.678-.281l.183.183.384-.385-.182-.183a1.63,1.63,0,0,0,.28-.677h.259v-.545h-.259a1.64,1.64,0,0,0-.28-.678l.182-.182-.384-.385-.183.183a1.63,1.63,0,0,0-.678-.281v-.259h-.544v.259a1.625,1.625,0,0,0-.678.281l-.184-.183-.385.385.183.183a1.634,1.634,0,0,0-.281.678h-.259v.545h.259a1.624,1.624,0,0,0,.281.677l-.183.183.385.385Zm.445-1.842a.715.715,0,1,1,0,1.011A.716.716,0,0,1,5499.325,2179.035Z" transform="translate(-5497.955 -2177.666)" /><path class="i" d="M5498.88,2181.061a1.614,1.614,0,0,0,.678.281v.259h.544v-.259a1.619,1.619,0,0,0,.678-.281l.183.183.19-.191-.82-.82a.715.715,0,0,1-1.012-1.01l-.82-.821-.19.191.183.182a1.633,1.633,0,0,0-.281.678h-.259V2180h.259a1.627,1.627,0,0,0,.281.678l-.183.183.385.385.184-.183Z" transform="translate(-5497.955 -2177.85)" /></g></g></g></g>
-                        </svg>
-                        <span class="logo-txt">Support Suite</span>
-                    </a>
-                </div>
+                
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse pmd-navbar-sidebar">
                     <div class="dropdown pmd-dropdown pmd-user-info pull-right">
@@ -121,7 +150,7 @@
 
                                 @using (Html.BeginForm("Logout", "VMMAssign", FormMethod.Post))
                                 {
-    <!-- form goes here -->
+                                    <!-- form goes here -->
 
 
 
@@ -178,6 +207,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="108" height="30" viewBox="0 0 108 30">
                             <defs>
                                 <style>
+
                                     .aa {
                                         fill: #ebeaec;
                                     }
@@ -193,192 +223,260 @@
         <!-- Nav menu with user information -->
 
     </header>
-   
-        <section class="sel-dat top-m in-pro">
-            <div class="container-fluid">
-                
-            </div>
 
-        </section>
-        <section class="res-box inp">
-            <!-- Linked pickers -->
-            <!-- Linked pickers code and example -->
-            <div class="col-md-9">
-               
+    <section class="sel-dat top-m in-pro">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="form-group pmd-textfield">
+                        <div class="sta-hdr">
+                            <label><img src="~/VmmAssets/images/list_icon.svg" alt="list icon"> <span>View InProgress Call</span></label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="res-box inp">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group pmd-textfield">
+                        <label for="regular1" class="control-label">Start Date</label>
+                        <input type="text" id="datepicker-start" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="form-group pmd-textfield">
+                        <label for="regular1" class="control-label">End Date</label>
+                        <input type="text" id="datepicker-end" class="form-control" />
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="form-group pmd-textfield">
+                        <label><img src="~/VmmAssets/images/user_icon.svg" alt="user icon"> <span>Customer Name</span></label>
+
+                        @Html.DropDownList("ddlCustName", new List<SelectListItem>
+               {
+
+
+               }, "SELECT ", new { @class = "select-with-search form-control pmd-select2" })
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group pmd-textfield">
+                        <label><img src="~/VmmAssets/images/location_icon.svg" alt="location icon"> <span>City</span></label>
+
+                        @Html.DropDownList("ddlCity", new List<SelectListItem>
+               {
+
+
+               }, "SELECT ", new { @class = "select-with-search form-control pmd-select2" })
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group pmd-textfield">
+                        <label for="regular1" class="control-label"><img src="~/VmmAssets/images/location_icon.svg" alt="location icon"> <span>State</span></label>
+                        <input type="text" id="txtstate" class="form-control" />
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+
                     <!--Linked pickers example -->
-                 
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                            <label for="regular1" class="control-label">Start Date</label>
-                            <input type="text" id="datepicker-start" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                            <label for="regular1" class="control-label">End Date</label>
-                            <input type="text" id="datepicker-end" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                            <label for="regular1" class="control-label">Customer Name</label>
-                            <input type="text" id="CustomerName" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                            <label for="regular1" class="control-label">State</label>
-                            <input type="text" id="State" class="form-control" />
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                            <label for="regular1" class="control-label">City</label>
-                            <input type="text" id="City" class="form-control" />
-                        </div>
-                    </div>
-                </div>
-                       
-                 
-               
-            </div> <!-- Linked pickers code and example end -->
 
-            <div class="col-md-3">
+                    <div class="row">
 
-                <!--Linked pickers example -->
-
-                <div class="row">
-
-                    <div class="col-sm-6">
-                        <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                            <input type="button" id="clickButton" name="SubmitButton" class="btn pmd-btn-raised pmd-ripple-effect btn-success" value="Submit" />
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- Hoverable table -->
-                        <div class="pmd-card pmd-z-depth">
-                            <div class="table-normal" id="PnlShowReport">
+                        <div class="col-sm-6">
+                            <div class="form-group pmd-textfield">
+                                <input type="button" id="clickButton" name="SubmitButton" class="btn pmd-btn-raised pmd-ripple-effect btn-success" value="Submit" />
 
                             </div>
                         </div>
 
-
-
-
-
                     </div>
                 </div>
             </div>
-        </section>
-
-       
-        <!-- jQuery before Propeller.js -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js">
-        </script>
-
-
-        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
-        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/dataTables.buttons.min.js"></script>
-
-        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.flash.min.js"></script>
-
-        <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-
-        <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
-        <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
-
-
-        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.html5.min.js"></script>
-
-        <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.print.min.js"></script>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Hoverable table -->
+                    <div class="pmd-card pmd-z-depth">
+                        <div class="table-normal table-responsive" id="PnlShowLeaveList">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
 
 
 
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="../VmmAssets/js/propeller.min.js"></script>
-        <script type="text/javascript" src="../VmmAssets/js/jquery.nicescroll.min.js"></script>
-        <script>
-		$(".do-nicescroll3").niceScroll();
-		$(document).ready(function() {
-			$(".pmd-switch input").change( function() {
-				if ($(this).is(":checked")) {
-					$(this).val("sre");
-				}
-				else {
-					$(this).val("sqe");
-				}
-			});
-		})
-        </script>
-
-        <script type="text/javascript">
+    <!-- jQuery before Propeller.js -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js">
+    </script>
 
 
-   //Disable Back Button In All Browsers.
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/dataTables.buttons.min.js"></script>
+
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.flash.min.js"></script>
+
+    <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
+    <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+
+
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.html5.min.js"></script>
+
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.4/js/buttons.print.min.js"></script>
+
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../VmmAssets/js/propeller.min.js"></script>
+    <script type="text/javascript" src="../VmmAssets/js/jquery.nicescroll.min.js"></script>
+
+    <!-- Datatable select js-->
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
+    <!-- Select2 js-->
+    <script type="text/javascript" src="../components/select2/js/select2.full.js"></script>
+    <script type="text/javascript" src="../components/select2/js/pmd-select2.js"></script>
+
+
+
+    <script>
+        $(".do-nicescroll3").niceScroll();
+        $(document).ready(function () {
+            $(".pmd-switch input").change(function () {
+                if ($(this).is(":checked")) {
+                    $(this).val("sre");
+                }
+                else {
+                    $(this).val("sqe");
+                }
+            });
+        })
+    </script>
+
+    <script type="text/javascript">
+
+
+        //Disable Back Button In All Browsers.
         function DisableBackButtonAllBrowsers() {
             window.history.forward()
         };
-         DisableBackButtonAllBrowsers();
+        DisableBackButtonAllBrowsers();
         window.onload = DisableBackButtonAllBrowsers;
-         window.onpageshow = function (evts) { if (evts.persisted) DisableBackButtonAllBrowsers(); };
+        window.onpageshow = function (evts) { if (evts.persisted) DisableBackButtonAllBrowsers(); };
         window.onunload = function () { void (0) };
-        </script>
+    </script>
 
-        <script type="text/javascript">
+    <script type="text/javascript">
+          function LoadCustomer() {
 
+
+            var url = '@Url.Action("LoadCustomer", "VMMAssign")';
+
+
+           
+            $.getJSON(url, function (result) {
+                var data = result;
+                $("#ddlCustName").empty();
+
+                $("#ddlCustName").append('<option selected="selected"  ></option>');
+                $.each(eval(data.replace(/[\r\n]/, "")), function (i, item) {
+
+                    $("#ddlCustName").append($('<option/>', { value: item.CustId, text: item.CustName }));
+
+                });
+            });
+        }
+
+
+          function LoadCity() {
+
+
+            var url = '@Url.Action("LoadCity", "VMMAssign")';
+
+            $.getJSON(url, function (result) {
+                var data = result;
+                $("#ddlCity").empty();
+                $("#ddlCity").append('<option selected="selected"  ></option>');
+                $.each(eval(data.replace(/[\r\n]/, "")), function (i, item) {
+
+                    $("#ddlCity").append($('<option/>', { value: item.City, text: item.City }));
+
+                });
+            });
+        }
 
 
         $(document).ready(function () {
+            LoadCustomer();
+
+            LoadCity();
+
+                $(".select-with-search").select2({
+            theme: "bootstrap"
+        });
+
 
             $("#clickButton").click(function () {
-                var startDate = $("#datepicker-start").val();
-                var EndDate = $("#datepicker-end").val();
-                var CustomerName = $("#CustomerName").val();
-                var State = $("#State").val();
-                var City = $("#City").val();
-                LoadTransaction(startDate, EndDate, CustomerName,State,City);
+              var startDate = $("#datepicker-start").val();
+                    var EndDate = $("#datepicker-end").val();
+                    var State = $('#txtstate').val();
+                    var city =$('#ddlCity option:selected').val();
+                    var CustomerName=$('#ddlCustName option:selected').val();
+                LoadTransaction(startDate, EndDate,city,CustomerName,State);
 
             });
 
-           
+
 
         });
 
-        function LoadTransaction(startDate, EndDate,CustomerName,State,City) {
+        function LoadTransaction(startDate, EndDate,City,CustomerName,State ) {
 
             $.ajax({
                 type: "POST",
 
                 url: "/VMMAssign/ViewSummaryReportView",
 
-                data: { StartDate: startDate, EndDate: EndDate, CustomerName: CustomerName, State: State, City: City },
+                data: { StartDate: startDate, EndDate: EndDate,City:City,CustomerName:CustomerName,State:State },
                 async: false,
                 dataType: "json",
                 success: function (data) {
 
-                    $("#PnlShowReport").empty();
-                    var table = $('#tblSummaryReport').DataTable();
+                    $("#PnlShowLeaveList").empty();
+                    var table = $('#tblAttendance').DataTable();
                     table.destroy();
 
-                    var tempTable = "<table id='tblSummaryReport' width='100%' Class='table pmd-table'><thead><tr>"
+                    var tempTable = "<table id='tblAttendance' Class='table pmd-table'><thead><tr>"
                     tempTable += "<th> Ticket Id</th>"
                     if (@usertype== 1) {
                         tempTable += "<th> Customer </th>"
                     }
                     tempTable += " <th>Vendor </th> <th>AssetType</th><th> No Of Assets </th> <th>No of Assets Pending</th> <th>No Of Assets Done</th>"
                     tempTable += "<th>No Of Activity Per Assest </th> <th>No Of Activity Done</th>"
-                    tempTable += "<th>No Of Activity NotDone</th> <th>AssignDate</th> <th>Date Of Completetion</th>"
+                    tempTable += "<th>No Of Activity NotDone</th> <th>AssignDate</th> <th>Date Of Completetion</th><th>Action</th>"
                     tempTable += "</tr ></thead > ";
 
                     $.each(eval(data.replace(/[\r\n]/, "")), function (i, item) {
@@ -387,15 +485,15 @@
 
                             tempTable += "<tr>";
 
-                            tempTable += "<td style='width:250px'>" + item.TransactionNo + "<input id='HiddenVendorId' type='hidden' name='HiddenVendorId'  value=" + item.TransactionNo + " /></td>";
+                            tempTable += "<td style='width:250px'>" + item.TransactionNo + "<input id='HiddenTransaction' type='hidden' name='HiddenTransaction'  value=" + item.TransactionNo + " /></td>";
                             if (@usertype== 1) {
                             tempTable += "<td style='width:250px'>" + item.custname + "</td>";
                              }
-                            tempTable += "<td style='width:250px'>" + item.Name + "</td>";
+                            tempTable += "<td style='width:250px'>" + item.Name + "<input id='HiddenAssestTypeId' type='hidden' name='HiddenAssestTypeId'  value=" + item.AssestTypeId + " /> </td>";
                             tempTable += "<td style='width:250px'>" + item.AssetsType + "</td>";
-                        tempTable += "<td style='width:250px'>" + item.noOfassets + "<input type='text' id='txtAssets' style='display:none' /></td>";
+                            tempTable += "<td style='width:250px'>" + item.noOfassets + "<input type='text' name='txtAssets' id='txtAssets'  value=" + item.noOfassets + " style='display: none;' /> </td>";
                             tempTable += "<td style='width:250px'>" + item.AssetsNOtDONE + "</td>";
-                            tempTable += "<td style='width:250px'>" + item.AssetsDONE + "</td>";
+                            tempTable += "<td style='width:250px'>" + item.AssetsDONE + " <input id='HiddenAssestValue' type='hidden' name='HiddenAssestValue'  value=" + item.noOfassets + " /></td>";
 
 
 
@@ -404,14 +502,9 @@
                             tempTable += "<td style='width:250px'>" + item.ActivitynotDone + "</td>";
                             tempTable += "<td style='width:250px'>" + item.AssignDate + "</td>";
                             tempTable += "<td style='width:250px'>" + item.maxdonedate + "</td>";
-                            tempTable += "<td><img id='btnEdit' src='Image/ic_mode_edit.png' style='cursor: pointer; display: none;'><img id='btnSubmit' src='Image/ic_done_black_24dp_1x.png' style='cursor: pointer; display: inline;'><img id='btncancel' src='Image/ic_close_black_24dp_1x.png' style='cursor: pointer; display: inline;'> </td>";
-
-
-
-
+                          
+                            tempTable += "<td><i id='btnEdit' class='material-icons' style='cursor: pointer; display: inline;'>create</i><i id='btnSubmit' class='material-icons' style='cursor: pointer; display: none;'>done</i><i id='btncancel' class='material-icons' style='cursor: pointer; display: none;'>clear</i></td>";
                             tempTable += "";
-
-
                             tempTable += "</tr>";
 
 
@@ -419,11 +512,12 @@
 
                     tempTable += "</tbody>";
                     tempTable += "</table>";
-                    $("#PnlShowReport").append(tempTable);
+                    $("#PnlShowLeaveList").append(tempTable);
 
 
-                    $('#tblSummaryReport').DataTable({
+                    $('#tblAttendance').DataTable({
                         "pageLength": 5,
+                        responsive: true,
                         dom: 'Bfrtip',
                         buttons: [
                             'csv', 'excel', 'pdf', 'print'
@@ -431,14 +525,66 @@
                     });
 
 
+                    //
+                    $('#tblAttendance tbody').on('click', 'td #btnEdit', function () {
+                        $(this).closest("tr").find('td #btncancel').show();
+                        $(this).closest("tr").find('td #btnSubmit').show();
+                         $(this).closest("tr").find('td #btnEdit').hide();
+                          $(this).closest("tr").find('td #txtAssets').keypress(function(event){
 
-                    $('#tblSummaryReport tbody').on('click', 'td #btnSubmit', function () {
+                   if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+                              event.preventDefault(); //stop character from entering input
+                                 }
+                                    });
+                    var AssestNo = $(this).closest("tr").find("td").eq(4).html();
+                     var Transaction = $(this).closest("tr").find("td").eq(0).html();
 
-                        alert('ok');
-                        $(this).closest("tr").find('td #txtAssets').show();
-                        var noOfassets = $(this).closest("tr").find('td #noOfassets').show();
-                        var Intime = $(this).closest("tr").find('td #txtAssets').val();
+
+                    $(this).closest("tr").find('td #txtAssets').show();
+                      var Intime = $(this).closest("tr").find('td #txtAssets').val();
                     });
+
+                    $('#tblAttendance tbody').on('click', 'td #btnSubmit', function () {
+                      
+                        var Transaction =$(this).closest("tr").find('td #HiddenTransaction').val();
+                        var txtAssetsVal= $(this).closest("tr").find('td #HiddenAssestValue').val();  
+
+                    var AssestNo = $(this).closest("tr").find('td #txtAssets').val();
+                     var AssestYpeId = $(this).closest("tr").find('td #HiddenAssestTypeId').val();
+
+                     
+                     if ( parseInt(txtAssetsVal) <  parseInt(AssestNo)) {
+
+                          var r = confirm("Are you sure you want to submit the Assets no?");
+                        if (r == true) {
+                              $(this).closest("tr").find('td #btncancel').hide();
+                            $(this).closest("tr").find('td #btnSubmit').hide();
+                            $(this).closest("tr").find('td #btnEdit').show();
+                            $(this).closest("tr").find('td #txtAssets').hide();
+                            UpdateAssestNo(Transaction, AssestNo, AssestYpeId);
+                        }
+                        else {
+                            return false;
+                        }
+
+                    }
+                    else {
+                        alert("Enter Assets number should be greater then old asset no value");
+                        return false;
+                    }
+                });
+
+
+                $('#tblAttendance tbody').on('click', 'td #btncancel', function () {
+                       $(this).closest("tr").find('td #btncancel').hide();
+                    $(this).closest("tr").find('td #btnSubmit').hide();
+                    $(this).closest("tr").find('td #btnEdit').show();
+                     $(this).closest("tr").find('td #txtAssets').hide();
+
+                 
+                });
+
+                    //
 
 
 
@@ -455,75 +601,115 @@
         }
 
 
-        </script>
 
-    
 
-        <!-- Scripts Ends -->
-        <!-- Javascript for Datepicker -->
-        <script type="text/javascript" language="javascript" src="../components/datetimepicker/js/moment-with-locales.js"></script>
-        <script type="text/javascript" language="javascript" src="../components/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+         function UpdateAssestNo(Transaction, AssestCountNO, AssestType) {
 
-        <script>
-	// Default date and time picker
-	$('#datetimepicker-default').datetimepicker();
+            var url = '@Url.Action("UpdateAssestNo", "VMMAssign")';
 
-	// View mode datepicker [shows only years and month]
-	$('#datepicker-view-mode').datetimepicker({
-		viewMode: 'years',
-		format: 'MM/YYYY'
-	});
 
-	// Inline datepicker
-	$('#datepicker-inline').datetimepicker({
-		inline: true
-	});
+             var url_com = url + "?Transaction=" + Transaction + '&AssestCountNO=' + AssestCountNO + '&AssestType=' + AssestType;
 
-	// Time picker only
-	$('#timepicker').datetimepicker({
-		format: 'LT'
-	});
 
-	// Linked date and time picker
-	// start date date and time picker
-	$('#datepicker-start').datetimepicker({
+            $.getJSON(url_com, function (result) {
+                var data = result;
 
-	    'format': "DD-MM-YYYY", // HH:mm:ss}
+                if (result) {
+                    alert('Remarks successfully submitted ');
 
-	} );
+                     var startDate = $("#datepicker-start").val();
+                    var EndDate = $("#datepicker-end").val();
+                    var State = $('#txtstate').val();
+                    var city =$('#ddlCity option:selected').val();
+                    var customername=$('#ddlCustName option:selected').val();
+                LoadTransaction(startDate, EndDate,city,customername,State);
 
-	// End date date and time picker
-	$('#datepicker-end').datetimepicker({
-	    useCurrent: false,
-	    'format': "DD-MM-YYYY",  // HH:mm:ss}
-	});
 
-	// start date picke on chagne event [select minimun date for end date datepicker]
-	$("#datepicker-start").on("dp.change", function (e) {
-		$('#datepicker-end').data("DateTimePicker").minDate(e.date);
-	});
-	// Start date picke on chagne event [select maxmimum date for start date datepicker]
-	$("#datepicker-end").on("dp.change", function (e) {
-		$('#datepicker-start').data("DateTimePicker").maxDate(e.date);
-	});
+                }
+                else {
+                    alert(' Error In Records Submitted ');
+                }
 
-	// Disabled Days of the Week (Disable sunday and saturday) [ 0-Sunday, 1-Monday, 2-Tuesday   3-wednesday 4-Thusday 5-Friday 6-Saturday]
-	$('#datepicker-disabled-days').datetimepicker({
-		 daysOfWeekDisabled: [0, 6]
-	});
 
-	// Datepicker in popup
-	$('#datepicker-popup-inline').datetimepicker({
-		inline: true
-	});
 
-	$("[data-header-left='true']").parent().addClass("pmd-navbar-left");
+            });
 
-	// Datepicker left header
-	$('#datepicker-left-header').datetimepicker({
-		'format' : "YYYY-MM-DD", // HH:mm:ss
-	});
-        </script>
+
+        }
+
+
+    </script>
+    <script type="text/javascript" language="javascript" src="../components/datetimepicker/js/moment-with-locales.js"></script>
+    <script type="text/javascript" language="javascript" src="../components/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+    <script>
+        // Default date and time picker
+        $('#datetimepicker-default').datetimepicker();
+
+        // View mode datepicker [shows only years and month]
+        $('#datepicker-view-mode').datetimepicker({
+            viewMode: 'years',
+            format: 'MM/YYYY'
+        });
+
+        // Inline datepicker
+        $('#datepicker-inline').datetimepicker({
+            inline: true
+        });
+
+        // Time picker only
+        $('#timepicker').datetimepicker({
+            format: 'LT'
+        });
+
+        // Linked date and time picker
+        // start date date and time picker
+        $('#datepicker-start').datetimepicker({
+
+            'format': "DD-MM-YYYY", // HH:mm:ss}
+
+        });
+
+        // End date date and time picker
+        $('#datepicker-end').datetimepicker({
+            useCurrent: false,
+            'format': "DD-MM-YYYY",  // HH:mm:ss}
+        });
+
+        // start date picke on chagne event [select minimun date for end date datepicker]
+        $("#datepicker-start").on("dp.change", function (e) {
+            $('#datepicker-end').data("DateTimePicker").minDate(e.date);
+        });
+        // Start date picke on chagne event [select maxmimum date for start date datepicker]
+        $("#datepicker-end").on("dp.change", function (e) {
+            $('#datepicker-start').data("DateTimePicker").maxDate(e.date);
+        });
+
+        // Disabled Days of the Week (Disable sunday and saturday) [ 0-Sunday, 1-Monday, 2-Tuesday   3-wednesday 4-Thusday 5-Friday 6-Saturday]
+        $('#datepicker-disabled-days').datetimepicker({
+            daysOfWeekDisabled: [0, 6]
+        });
+
+        // Datepicker in popup
+        $('#datepicker-popup-inline').datetimepicker({
+            inline: true
+        });
+
+        $("[data-header-left='true']").parent().addClass("pmd-navbar-left");
+
+
+
+        // Datepicker left header
+        $('#datepicker-left-header').datetimepicker({
+            'format': "YYYY-MM-DD", // HH:mm:ss
+        });
+        function abc(d) {
+            alert(d);
+        }
+        
+        $('#tblAttendance').DataTable()
+            .columns.adjust()
+            .responsive.recalc();
+    </script>
 </body>
 </html>
 

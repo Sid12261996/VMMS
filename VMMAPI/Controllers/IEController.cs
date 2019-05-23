@@ -56,7 +56,7 @@ namespace VMMAPI.Controllers
         public ActionResult AddIE(IE fc)
         {
             var res= dataRepository.InsertIE(fc);
-            TempData["Message"] = "Record has been insertesd Successfully with Id: " +res ;
+            TempData["Message"] = "Record has been insertesd Successfully" ;
             return RedirectToAction("AddIE", "IE");
         }
 
@@ -76,7 +76,7 @@ namespace VMMAPI.Controllers
             ie.Question = fc["Question"];
             ie.Answer = fc["Answer"];
             dataRepository.UpdateIE(ie);
-            TempData["Message"] = "Record has been updated Successfully with Id: "+ie.Id;
+            TempData["Message"] = "Record has been updated Successfully";
             return RedirectToAction("AddIE", "IE");
             
         }

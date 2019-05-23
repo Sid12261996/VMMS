@@ -1,0 +1,101 @@
+﻿<!-- Bootstrap css-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!--Google Icon Font-->
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Google Font-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+<!-- Propeller css -->
+<link href="~/VmmAssets/css/propeller.min.css" rel="stylesheet">
+<!-- Custom css -->
+<link href="~/VmmAssets/css/style.css" rel="stylesheet">
+<link href="~/VmmAssets/css/responsive.css" rel="stylesheet">
+
+<!-- Select2 css-->
+<link rel="stylesheet" type="text/css" href="../components/select2/css/select2.min.css" />
+<link rel="stylesheet" type="text/css" href="../components/select2/css/select2-bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../components/select2/css/pmd-select2.css" />
+<nav class="navbar navbar-fixed-top pmd-navbar pmd-z-depth">
+    <div class="container-fluid">
+        <input type="hidden" id="taskidhidden" />
+        <input type="hidden" id="AssetsIdHidden" />
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button class="pmd-ripple-effect navbar-toggle pmd-navbar-toggle" type="button">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="javascript:void(0);" class="navbar-brand navbar-brand-custome">
+                <img src="~/VmmAssets/images/team_blue_logo.svg" alt="team blue logo"><span class="logo-txt">Project Governance</span>
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse pmd-navbar-sidebar">
+            <div class="dropdown pmd-dropdown pmd-user-info pull-right">
+                <a href="javascript:void(0);" class="btn-user dropdown-toggle media" data-toggle="dropdown" data-sidebar="true" aria-expanded="false">
+                    <div class="media-left">
+
+                        @using (Html.BeginForm("Logout", "VMMAssign", FormMethod.Post))
+                        {
+                            <!-- form goes here -->
+
+
+
+                            <input type="submit" value="" class="logout-icon" />
+
+
+                        }
+                    </div>
+
+                </a>
+
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a class="pmd-ripple-effect active" href="@Url.Action("AssignTaskNew1", "VMMAssign")" ;">
+                        <i class="material-icons">
+                            add
+                        </i> <span>Assign New</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="pmd-ripple-effect " href="@Url.Action("ShowTransactionDetails", "VMMAssign")" ;">
+                        <span>In Progress</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="pmd-ripple-effect" href="@Url.Action("ViewSummaryReport", "VMMAssign")" ;">
+                        <span>Summary</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="pmd-ripple-effect" href="@Url.Action("ViewDashBoardReport", "VMMAssign")" ;">
+                        <span>Detailed Report</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="pmd-ripple-effect" href="@Url.Action("AddIE", "IE")" ;">
+                        <span>IE</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="pmd-ripple-effect" href="#" ;">
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="pmd-ripple-effect" href="#" ;">
+                        <span>Customer Report</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="pmd-ripple-effect" href="#" ;">
+                        <span>Engineer Report</span>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+    <div class="pmd-sidebar-overlay"></div>
+</nav>
