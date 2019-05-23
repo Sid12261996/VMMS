@@ -117,7 +117,7 @@ namespace VMMAPI.Controllers
 
         }
 
-        public ActionResult ShowTransactionDetailsGet()
+        public ActionResult ShowTransactionDetailsGet(string StartDate, string EndDate, string City, string CustomerName, string State)
         {
 
             var userId = TempData.Peek("UserID");
@@ -128,9 +128,15 @@ namespace VMMAPI.Controllers
             this.cmdObj.Parameters.Add(new SqlParameter("@transaction", SqlDbType.NVarChar)).Value = "";
             this.cmdObj.Parameters.Add(new SqlParameter("@CusUserName", SqlDbType.NVarChar)).Value = userId;
             this.cmdObj.Parameters.Add(new SqlParameter("@userType", SqlDbType.NVarChar)).Value = userType;
+            this.cmdObj.Parameters.Add(new SqlParameter("@StartDate", SqlDbType.NVarChar)).Value = StartDate;
+            this.cmdObj.Parameters.Add(new SqlParameter("@EndDate", SqlDbType.NVarChar)).Value = EndDate;
+            this.cmdObj.Parameters.Add(new SqlParameter("@CustomerName", SqlDbType.NVarChar)).Value = CustomerName;
+            this.cmdObj.Parameters.Add(new SqlParameter("@City", SqlDbType.NVarChar)).Value = City;
+            this.cmdObj.Parameters.Add(new SqlParameter("@State", SqlDbType.NVarChar)).Value = State;
             DataTable dataTable = new DataTable();
             return (ActionResult)this.Json((object)this.DataTableToJSONWithJavaScriptSerializer(this.du.GetDataTableWithProc(this.cmdObj)), JsonRequestBehavior.AllowGet);
         }
+
 
         [HttpPost]
         [UserAuthenticationFilter]
@@ -165,11 +171,12 @@ namespace VMMAPI.Controllers
 
         }
 
-        //test--------------------
+
+       
         Dictionary<string, Array> Image = new Dictionary<string, Array>();
 
         [UserAuthenticationFilter]
-        public ActionResult ViewDashBoardReport(string StartDate, string EndDate,string CustName,String City,String State,String Status)
+        public ActionResult ViewDashBoardReport(string StartDate, string EndDate, string CustName, String City, String State, String Status)
         {
             IFormatProvider theCultureInfo = new System.Globalization.CultureInfo("en-GB", true);
             var userId = TempData.Peek("UserID");
@@ -200,34 +207,40 @@ namespace VMMAPI.Controllers
             //}
             //foreach (string str in result)
             //    Console.WriteLine(str);
+            //--------------------------------------------------------//
+            // var dict = new List<Dictionary<string, string[]>>();
 
-            var dict = new List<Dictionary<string, string[]>>();
-           
-            //string myData = datatable.Rows[0][9].ToString();
-            if (datatable.Rows.Count > 0)
-            {
-                
-                foreach (DataRow dtRow in datatable.Rows)
-                {
-                    string[] values = new string[2]; 
-                    values[0]= dtRow["BImage"].ToString();
-                    values[1]= dtRow["AImage"].ToString();
-                    var dummy = new Dictionary<string, string[]>();
-                    dummy.Add(dtRow["Description"].ToString(), values);
-                    dict.Add(dummy);
-                        //var Description=dtRow["Description"].ToString();
-                        //var BImage = dtRow["BImage"].ToString();
-                        //var AImage = dtRow["AImage"].ToString();
-                }
-            }
-            //object toReturn = new object();
-           var toReturn=new toReturnFormat();
-              toReturn.Other =returningSerialsedData(datatable);
-            toReturn.Description = dict;
-            
+            // //string myData = datatable.Rows[0][9].ToString();
+            // if (datatable.Rows.Count > 0)
+            // {
+
+            //     foreach (DataRow dtRow in datatable.Rows)
+            //     {
+            //         string[] values = new string[2]; 
+            //         values[0]= dtRow["BImage"].ToString();
+            //         values[1]= dtRow["AImage"].ToString();
+            //         var dummy = new Dictionary<string, string[]>();
+            //         dummy.Add(dtRow["Description"].ToString(), values);
+            //         dict.Add(dummy);
+            //             //var Description=dtRow["Description"].ToString();
+            //             //var BImage = dtRow["BImage"].ToString();
+            //             //var AImage = dtRow["AImage"].ToString();
+            //     }
+            // }
+            // //object toReturn = new object();
+            //var toReturn=new toReturnFormat();
+            //   toReturn.Other =returningSerialsedData(datatable);
+            // toReturn.Description = dict;
+            //return (ActionResult)this.Json(toReturn, JsonRequestBehavior.AllowGet);
+            //--------------------------------------------------------//
+
+
+            // var datatable = this.du.GetDataTableWithProc(this.cmdObj);
+            var toReturn = returningSerialsedData(datatable);
+
             return (ActionResult)this.Json(toReturn, JsonRequestBehavior.AllowGet);
-
         }
+
         private List<Dictionary<string, object>> returningSerialsedData(DataTable table)
         {
 
@@ -243,13 +256,13 @@ namespace VMMAPI.Controllers
 
             return dictionaryList;
         }
-    
 
 
 
-    [UserAuthenticationFilter]
-        
-        public ActionResult ViewSummaryReportView(string StartDate,string EndDate,string CustomerName,string State,string City)
+
+        [UserAuthenticationFilter]
+
+        public ActionResult ViewSummaryReportView(string StartDate, string EndDate, string City, String CustomerName, string State)
         {
             IFormatProvider theCultureInfo = new System.Globalization.CultureInfo("en-GB", true);
             string empty = string.Empty;
@@ -262,13 +275,15 @@ namespace VMMAPI.Controllers
             this.cmdObj.Parameters.Add(new SqlParameter("@CusUserName", SqlDbType.NVarChar)).Value = userId;
             this.cmdObj.Parameters.Add(new SqlParameter("@userType", SqlDbType.NVarChar)).Value = userType;
             this.cmdObj.Parameters.Add(new SqlParameter("@CustomerName", SqlDbType.NVarChar)).Value = CustomerName;
-            this.cmdObj.Parameters.Add(new SqlParameter("@State", SqlDbType.NVarChar)).Value = State;
             this.cmdObj.Parameters.Add(new SqlParameter("@City", SqlDbType.NVarChar)).Value = City;
+            this.cmdObj.Parameters.Add(new SqlParameter("@State", SqlDbType.NVarChar)).Value = State;
+
             DataTable dataTable = new DataTable();
             return (ActionResult)this.Json((object)this.DataTableToJSONWithJavaScriptSerializer(this.du.GetDataTableWithProc(this.cmdObj)), JsonRequestBehavior.AllowGet);
-            }
+        }
 
-     
+
+
 
 
         [HttpPost]
@@ -351,7 +366,7 @@ namespace VMMAPI.Controllers
                 string custName = Coll.Get("ddlCustName");
                 string City = Coll.Get("ddlCity");
                 string Vendor = Request.Form["HiddenVendor"].ToString();
-                string ACtType = Request.Form["HiddenActType"];//ye kisne chnage kiya hai //Maine kukik iski input typ change ki thi
+                string ACtType = Request.Form["HiddenActType"];//
                 string AssetsNO = Coll.Get("txtAssestNo");
                 string AssetType = Coll.Get("ddlAssestType");
                 string Address = Coll.Get("txtAddress");
@@ -433,22 +448,53 @@ namespace VMMAPI.Controllers
         }
 
 
-        public ActionResult ShowTransactionExpandView_get(string TRNO)
+        public ActionResult ViewImagePopup(string Trasaction, string ActivityId, string AssetType)
         {
-            string Transaction = VMMAssignController.Base64Decode(TRNO);
 
             string empty = string.Empty;
-
             this.cmdObj = new SqlCommand();
-            this.cmdObj.CommandText = "[GetTransactionDetails]";
-            this.cmdObj.Parameters.Add(new SqlParameter("@transaction", SqlDbType.NVarChar)).Value = (object)Transaction;
-
+            this.cmdObj.CommandText = "[usp_ImageGet]";
+            this.cmdObj.Parameters.Add(new SqlParameter("@TransactionNo", SqlDbType.NVarChar)).Value = Trasaction;
+            this.cmdObj.Parameters.Add(new SqlParameter("@AssestId", SqlDbType.NVarChar)).Value = AssetType;
+            this.cmdObj.Parameters.Add(new SqlParameter("@Activity", SqlDbType.NVarChar)).Value = ActivityId;
             DataTable dataTable = new DataTable();
             return (ActionResult)this.Json((object)this.DataTableToJSONWithJavaScriptSerializer(this.du.GetDataTableWithProc(this.cmdObj)), JsonRequestBehavior.AllowGet);
 
 
         }
 
+
+
+        public ActionResult ShowTransactionExpandView_get(string TRNO)
+        {
+            string Transaction = VMMAssignController.Base64Decode(TRNO);
+            var userId = TempData.Peek("UserID");
+            var userType = TempData.Peek("UserType");
+            string empty = string.Empty;
+            this.cmdObj = new SqlCommand();
+            this.cmdObj.CommandText = "[GetTransactionDetailsPicture]";
+            this.cmdObj.Parameters.Add(new SqlParameter("@transaction", SqlDbType.NVarChar)).Value = (object)Transaction;
+            this.cmdObj.Parameters.Add(new SqlParameter("@CusUserName", SqlDbType.NVarChar)).Value = userId;
+            this.cmdObj.Parameters.Add(new SqlParameter("@userType", SqlDbType.NVarChar)).Value = userType;
+            DataTable dataTable = new DataTable();
+            return (ActionResult)this.Json((object)this.DataTableToJSONWithJavaScriptSerializer(this.du.GetDataTableWithProc(this.cmdObj)), JsonRequestBehavior.AllowGet);
+
+
+        }
+
+
+        public ActionResult UpdateAssestNo(string Transaction, string AssestCountNO, string AssestType)
+        {
+
+
+            bool flag = new Transaction().UpdateAssestNo(Transaction, AssestCountNO, AssestType);
+
+
+
+
+            return (ActionResult)this.Json((object)flag, JsonRequestBehavior.AllowGet);
+
+        }
 
 
         public ActionResult ShowPhysialImage(string TRNO)

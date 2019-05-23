@@ -372,6 +372,378 @@ D:\Mapping_New\VMMAPI_NEW\VMM\VMMAPI\obj\Debug\VMMAPI.csproj.CopyComplete
 D:\Mapping_New\VMMAPI_NEW\VMM\VMMAPI\obj\Debug\VMMAPI.dll
 D:\Mapping_New\VMMAPI_NEW\VMM\VMMAPI\obj\Debug\VMMAPI.pdb
 D:\Mapping_New\VMMAPI_NEW\VMM\VMMAPI\obj\Debug\VMMAPI.csprojAssemblyReference.cache
+E:\VMM\VMM\VMMAPI\bin\ApplicationInsights.config
+E:\VMM\VMM\VMMAPI\bin\roslyn\csc.exe
+E:\VMM\VMM\VMMAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\VMM\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\VMM\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\VMM\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\VMM\VMM\VMMAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\VMM\VMM\VMMAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\VMM\VMM\VMMAPI\bin\roslyn\System.Collections.Immutable.dll
+E:\VMM\VMM\VMMAPI\bin\roslyn\System.Reflection.Metadata.dll
+E:\VMM\VMM\VMMAPI\bin\roslyn\vbc.exe
+E:\VMM\VMM\VMMAPI\bin\roslyn\VBCSCompiler.exe
+E:\VMM\VMM\VMMAPI\bin\roslyn\VBCSCompiler.exe.config
+E:\VMM\VMM\VMMAPI\bin\VMMAPI.dll.config
+E:\VMM\VMM\VMMAPI\bin\VMMAPI.dll
+E:\VMM\VMM\VMMAPI\bin\VMMAPI.pdb
+E:\VMM\VMM\VMMAPI\bin\Antlr3.Runtime.dll
+E:\VMM\VMM\VMMAPI\bin\EntityFramework.dll
+E:\VMM\VMM\VMMAPI\bin\EntityFramework.SqlServer.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.Agent.Intercept.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.DependencyCollector.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.Web.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.WindowsServer.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.ApplicationInsights.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Core.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.Cookies.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.Facebook.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.Google.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.OAuth.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.Twitter.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Web.Infrastructure.dll
+E:\VMM\VMM\VMMAPI\bin\Newtonsoft.Json.dll
+E:\VMM\VMM\VMMAPI\bin\Owin.dll
+E:\VMM\VMM\VMMAPI\bin\System.Net.Http.Formatting.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.Helpers.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.Http.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.Http.Owin.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.Http.WebHost.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.Mvc.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.Optimization.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.Razor.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.WebPages.Deployment.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.WebPages.dll
+E:\VMM\VMM\VMMAPI\bin\System.Web.WebPages.Razor.dll
+E:\VMM\VMM\VMMAPI\bin\Vse.Web.Serialization.dll
+E:\VMM\VMM\VMMAPI\bin\WebGrease.dll
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.DependencyCollector.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.Web.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AI.WindowsServer.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.ApplicationInsights.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\VMM\VMM\VMMAPI\bin\Newtonsoft.Json.xml
+E:\VMM\VMM\VMMAPI\bin\System.Net.Http.Formatting.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.Helpers.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.Http.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.Http.WebHost.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.Mvc.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.Optimization.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.Razor.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.WebPages.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.WebPages.Deployment.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.WebPages.Razor.xml
+E:\VMM\VMM\VMMAPI\bin\Vse.Web.Serialization.pdb
+E:\VMM\VMM\VMMAPI\bin\Antlr3.Runtime.pdb
+E:\VMM\VMM\VMMAPI\bin\EntityFramework.xml
+E:\VMM\VMM\VMMAPI\bin\EntityFramework.SqlServer.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Core.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.Facebook.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.Cookies.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.OAuth.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.Google.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.Twitter.xml
+E:\VMM\VMM\VMMAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\VMM\VMM\VMMAPI\bin\System.Web.Http.Owin.xml
+E:\VMM\VMM\VMMAPI\obj\Debug\VMMAPI.csprojResolveAssemblyReference.cache
+E:\VMM\VMM\VMMAPI\obj\Debug\VMMAPI.dll
+E:\VMM\VMM\VMMAPI\obj\Debug\VMMAPI.pdb
+D:\VMM\VMMAPI\bin\EntityFramework.dll
+D:\VMM\VMMAPI\bin\ApplicationInsights.config
+D:\VMM\VMMAPI\bin\roslyn\csc.exe
+D:\VMM\VMMAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\VMM\VMMAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\VMM\VMMAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\VMM\VMMAPI\bin\roslyn\System.Collections.Immutable.dll
+D:\VMM\VMMAPI\bin\roslyn\System.Reflection.Metadata.dll
+D:\VMM\VMMAPI\bin\roslyn\vbc.exe
+D:\VMM\VMMAPI\bin\roslyn\VBCSCompiler.exe
+D:\VMM\VMMAPI\bin\roslyn\VBCSCompiler.exe.config
+D:\VMM\VMMAPI\bin\VMMAPI.dll.config
+D:\VMM\VMMAPI\bin\VMMAPI.dll
+D:\VMM\VMMAPI\bin\VMMAPI.pdb
+D:\VMM\VMMAPI\bin\Antlr3.Runtime.dll
+D:\VMM\VMMAPI\bin\EntityFramework.SqlServer.dll
+D:\VMM\VMMAPI\bin\Microsoft.AI.Agent.Intercept.dll
+D:\VMM\VMMAPI\bin\Microsoft.AI.DependencyCollector.dll
+D:\VMM\VMMAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\VMM\VMMAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\VMM\VMMAPI\bin\Microsoft.AI.Web.dll
+D:\VMM\VMMAPI\bin\Microsoft.AI.WindowsServer.dll
+D:\VMM\VMMAPI\bin\Microsoft.ApplicationInsights.dll
+D:\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Core.dll
+D:\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\VMM\VMMAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\VMM\VMMAPI\bin\Microsoft.Owin.dll
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.Cookies.dll
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.dll
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.Facebook.dll
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.Google.dll
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.Twitter.dll
+D:\VMM\VMMAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\VMM\VMMAPI\bin\Newtonsoft.Json.dll
+D:\VMM\VMMAPI\bin\Owin.dll
+D:\VMM\VMMAPI\bin\System.Net.Http.Formatting.dll
+D:\VMM\VMMAPI\bin\System.Web.Helpers.dll
+D:\VMM\VMMAPI\bin\System.Web.Http.dll
+D:\VMM\VMMAPI\bin\System.Web.Http.Owin.dll
+D:\VMM\VMMAPI\bin\System.Web.Http.WebHost.dll
+D:\VMM\VMMAPI\bin\System.Web.Mvc.dll
+D:\VMM\VMMAPI\bin\System.Web.Optimization.dll
+D:\VMM\VMMAPI\bin\System.Web.Razor.dll
+D:\VMM\VMMAPI\bin\System.Web.WebPages.Deployment.dll
+D:\VMM\VMMAPI\bin\System.Web.WebPages.dll
+D:\VMM\VMMAPI\bin\System.Web.WebPages.Razor.dll
+D:\VMM\VMMAPI\bin\Vse.Web.Serialization.dll
+D:\VMM\VMMAPI\bin\WebGrease.dll
+D:\VMM\VMMAPI\bin\Microsoft.AI.DependencyCollector.xml
+D:\VMM\VMMAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\VMM\VMMAPI\bin\Microsoft.AI.Web.xml
+D:\VMM\VMMAPI\bin\Microsoft.AI.WindowsServer.xml
+D:\VMM\VMMAPI\bin\Microsoft.ApplicationInsights.xml
+D:\VMM\VMMAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\VMM\VMMAPI\bin\Newtonsoft.Json.xml
+D:\VMM\VMMAPI\bin\System.Net.Http.Formatting.xml
+D:\VMM\VMMAPI\bin\System.Web.Helpers.xml
+D:\VMM\VMMAPI\bin\System.Web.Http.xml
+D:\VMM\VMMAPI\bin\System.Web.Http.WebHost.xml
+D:\VMM\VMMAPI\bin\System.Web.Mvc.xml
+D:\VMM\VMMAPI\bin\System.Web.Optimization.xml
+D:\VMM\VMMAPI\bin\System.Web.Razor.xml
+D:\VMM\VMMAPI\bin\System.Web.WebPages.xml
+D:\VMM\VMMAPI\bin\System.Web.WebPages.Deployment.xml
+D:\VMM\VMMAPI\bin\System.Web.WebPages.Razor.xml
+D:\VMM\VMMAPI\bin\Vse.Web.Serialization.pdb
+D:\VMM\VMMAPI\bin\Antlr3.Runtime.pdb
+D:\VMM\VMMAPI\bin\EntityFramework.xml
+D:\VMM\VMMAPI\bin\EntityFramework.SqlServer.xml
+D:\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Core.xml
+D:\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\VMM\VMMAPI\bin\Microsoft.Owin.xml
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.xml
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.Facebook.xml
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.Cookies.xml
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.Google.xml
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.Twitter.xml
+D:\VMM\VMMAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\VMM\VMMAPI\bin\System.Web.Http.Owin.xml
+D:\VMM\VMMAPI\obj\Debug\VMMAPI.csprojAssemblyReference.cache
+D:\VMM\VMMAPI\obj\Debug\VMMAPI.csproj.CoreCompileInputs.cache
+D:\VMM\VMMAPI\obj\Debug\VMMAPI.csproj.CopyComplete
+D:\VMM\VMMAPI\obj\Debug\VMMAPI.dll
+D:\VMM\VMMAPI\obj\Debug\VMMAPI.pdb
+D:\VMM15may19\VMM\VMMAPI\bin\ApplicationInsights.config
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\csc.exe
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\System.Collections.Immutable.dll
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\System.Reflection.Metadata.dll
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\vbc.exe
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\VBCSCompiler.exe
+D:\VMM15may19\VMM\VMMAPI\bin\roslyn\VBCSCompiler.exe.config
+D:\VMM15may19\VMM\VMMAPI\bin\VMMAPI.dll.config
+D:\VMM15may19\VMM\VMMAPI\bin\VMMAPI.dll
+D:\VMM15may19\VMM\VMMAPI\bin\VMMAPI.pdb
+D:\VMM15may19\VMM\VMMAPI\bin\Antlr3.Runtime.dll
+D:\VMM15may19\VMM\VMMAPI\bin\EntityFramework.dll
+D:\VMM15may19\VMM\VMMAPI\bin\EntityFramework.SqlServer.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.Agent.Intercept.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.DependencyCollector.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.Web.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.WindowsServer.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.ApplicationInsights.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Core.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.Cookies.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.Facebook.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.Google.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.OAuth.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.Twitter.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Web.Infrastructure.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Newtonsoft.Json.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Owin.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Net.Http.Formatting.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Helpers.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Http.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Http.Owin.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Http.WebHost.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Mvc.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Optimization.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Razor.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.WebPages.Deployment.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.WebPages.dll
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.WebPages.Razor.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Vse.Web.Serialization.dll
+D:\VMM15may19\VMM\VMMAPI\bin\WebGrease.dll
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.DependencyCollector.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.Web.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AI.WindowsServer.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.ApplicationInsights.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Newtonsoft.Json.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Net.Http.Formatting.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Helpers.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Http.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Http.WebHost.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Mvc.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Optimization.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Razor.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.WebPages.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.WebPages.Deployment.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.WebPages.Razor.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Vse.Web.Serialization.pdb
+D:\VMM15may19\VMM\VMMAPI\bin\Antlr3.Runtime.pdb
+D:\VMM15may19\VMM\VMMAPI\bin\EntityFramework.xml
+D:\VMM15may19\VMM\VMMAPI\bin\EntityFramework.SqlServer.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Core.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.Facebook.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.Cookies.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.OAuth.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.Google.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.Twitter.xml
+D:\VMM15may19\VMM\VMMAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\VMM15may19\VMM\VMMAPI\bin\System.Web.Http.Owin.xml
+D:\VMM15may19\VMM\VMMAPI\obj\Debug\VMMAPI.csprojResolveAssemblyReference.cache
+D:\VMM15may19\VMM\VMMAPI\obj\Debug\VMMAPI.dll
+D:\VMM15may19\VMM\VMMAPI\obj\Debug\VMMAPI.pdb
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\ApplicationInsights.config
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\csc.exe
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\vbc.exe
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\VMMAPI.dll.config
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\VMMAPI.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\VMMAPI.pdb
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Antlr3.Runtime.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\EntityFramework.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.Web.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.ApplicationInsights.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Newtonsoft.Json.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Owin.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Helpers.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Http.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Http.Owin.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Mvc.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Optimization.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Razor.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.WebPages.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Vse.Web.Serialization.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\WebGrease.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.Web.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.ApplicationInsights.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Newtonsoft.Json.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Helpers.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Http.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Mvc.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Optimization.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Razor.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.WebPages.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Vse.Web.Serialization.pdb
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Antlr3.Runtime.pdb
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\EntityFramework.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\bin\System.Web.Http.Owin.xml
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\obj\Debug\VMMAPI.csprojAssemblyReference.cache
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\obj\Debug\VMMAPI.csproj.CoreCompileInputs.cache
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\obj\Debug\VMMAPI.csproj.CopyComplete
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\obj\Debug\VMMAPI.dll
+C:\Users\8871\Desktop\VMM Live\VMM\VMMAPI\obj\Debug\VMMAPI.pdb
 C:\Users\Sidharth\Desktop\SidProjects\VMMS\VMMS\VMMAPI\bin\ApplicationInsights.config
 C:\Users\Sidharth\Desktop\SidProjects\VMMS\VMMS\VMMAPI\bin\roslyn\csc.exe
 C:\Users\Sidharth\Desktop\SidProjects\VMMS\VMMS\VMMAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll

@@ -12,18 +12,14 @@
     <title>AddIE</title>
     <script src="~/assets/js/bootstrap.min.js"></script>
 </head>
-<body>
-         
-        <div id="divget" >
-        <table border="1" width="80%">
+<body>  
+    <div id="divget" class="container-fluid faq">
+        <div class="table-cvr">
+            <h2>Frequently asked incidents</h2>
+            <table border="1" width="100%">
 
                 <thead>
-                    <tr>
-                        <td>Id</td>
-                        <td>Question</td>
-                        <td>Answer</td>
-                        <td>Action</td>
-                    </tr>
+                    
                 </thead>
 
                 <tbody>
@@ -31,9 +27,9 @@
                         foreach (System.Data.DataRow dr in ViewBag.IE.Rows)
                         {
                             <tr>
-                                <td>@dr["Id"]</td>
-                                <td>@dr["Question"]</td>
-                                <td><a href=@dr["Answer"]>@dr["Answer"]</a></td>
+                                <td>@dr["Question"] <br />
+                                    <a href=@dr["Answer"]>@dr["Answer"]</a>
+                                </td>
                                 <td>
                                     <a href="/IE/UpdateIE?Id=@dr["Id"]">Edit</a>
                                 </td>
@@ -44,8 +40,7 @@
                 </tbody>
             </table>
         </div>
-
-    
-                            
-    </body>
+        
+    </div>                     
+</body>
 </html>

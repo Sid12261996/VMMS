@@ -93,6 +93,25 @@ namespace VMMAPI.Models
             else { return false; }
         }
 
+        public bool UpdateAssestNo(string Transaction, string AssestCountNO, string AssestType)
+        {
+            cmdObj = new SqlCommand();
+            cmdObj.CommandText = "[UpdateTransactionAssignVendor]";
+
+            cmdObj.Parameters
+                .Add(new SqlParameter("@TransactionNO", SqlDbType.NVarChar))
+                .Value = Transaction;
+            this.cmdObj.Parameters.Add(new SqlParameter("@AssestCountNO", SqlDbType.NVarChar)).Value = (object)AssestCountNO;
+
+            this.cmdObj.Parameters.Add(new SqlParameter("@AssestType", SqlDbType.NVarChar)).Value = (object)AssestType;
+
+            SqlParameter sqlParameter = this.cmdObj.Parameters.Add("@ERROR", SqlDbType.Int);//@FeedBackType
+            sqlParameter.Direction = ParameterDirection.Output;
+            return this.ExecuteSqlProcedure(this.cmdObj) && sqlParameter.Value.ToString() == "1";
+
+
+        }
+
 
 
         public bool Insert_Remarks(string Transaction, string Activityid, string Remarks, string Status,string AssetsId)
